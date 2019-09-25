@@ -1,0 +1,325 @@
+---
+title: "TrendsPO presentation OBIS"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE)
+```
+
+# Data on IPT
+
+```{r loadlibrary, warning=FALSE}
+library(httr)
+library(finch)
+library(ggplot2)
+library(sqldf)
+library(lubridate)
+library(mgcv)
+library(visreg)
+library(gridExtra)
+library(worrms)
+library(sf)
+```
+
+```{r loadipt, cache=TRUE}
+# PRIVATE DATASET
+# p <- httr::POST("http://ipt.iobis.org/training/login.do", body =list(email = "<YOUR E-MAIL>", password="<YOUR PASSWORD HERE"), encode = "form")
+d <- httr::GET("http://ipt.vliz.be/eurobis/archive.do?r=gulf_of_trieste_lter_phytoplankton_time_series&v=1.1", write_disk("gulf_of_trieste_lter_phytoplankton_time_series.zip", overwrite = TRUE))
+dwca <- finch::dwca_read("gulf_of_trieste_lter_phytoplankton_time_series.zip", read=TRUE)
+
+occ <- dwca$data$occurrence.txt
+mof <- dwca$data$measurementorfact.txt
+
+join <- dplyr::left_join(occ[,c("id", "scientificNameID", "scientificName", "decimalLongitude", "decimalLatitude", "year", "month", "day")], mof[mof$measurementType=="Abundance",], by="id")
+join$individualCount <- join$measurementValue
+join$samplingEffort <- "cells/l"
+dwca$data$occurrence.txt <- join
+```
+
+### Plot number of records per year (1995-2004)
+
+```{r nrecords}
+plot_years_nrecords <- function(dwca, binwidth=1) {
+  data <- dwca$data$occurrence.txt
+  data <- data[,]
+  ggplot(data, aes(x = as.factor(year))) +
+    stat_count() +
+    labs(x='Year', y='Number of occurrence records')
+}
+plot_years_nrecords(dwca, 1)
+```
+
+### Plot distribution of individual count per year (1995-2004)
+
+```{r years_individualcount}
+plot_years_individualcount <- function(dwca) {
+  opt <- options("scipen"=999, "digits"=10)
+  on.exit(options(opt))
+  data <- dwca$data$occurrence.txt
+  data$individualCount <- as.numeric(data$individualCount)
+  data <- data[!is.na(data$individualCount),]
+  ggplot(data, aes(x=as.factor(year), y=individualCount)) +
+    geom_boxplot() +
+    scale_y_log10() +
+    facet_grid(. ~ samplingEffort) +
+    labs(x="Year", y="Individual count")
+}
+plot_years_individualcount(dwca)
+```
+
+### Plot timeseries for a few species (1995-2004)
+
+```{r timeseries}
+plot_timeseries <- function(dwca) {
+  data <- dwca$data$occurrence.txt
+  data <- data[!is.na(data$samplingEffort),]
+  data$year <- as.numeric(data$year)
+  data$month <- as.numeric(data$month)
+  data$day <- as.numeric(data$day)
+  data$time <- decimal_date(ymd(paste(data$year,data$month,data$day,sep="-")))
+  data <- data[!is.na(data$individualCount) & data$individualCount >= 0 ,]
+  data$y <- data$individualCount
+  data$season <- data$time%%1
+
+  tknots <<- 10
+  sknots <<- 4
+  tfix <<- FALSE
+  sfix <<- FALSE
+
+  samplingmethods <- unique(data$samplingEffort)
+  for (sampling in samplingmethods) {
+    d <- data[data$samplingEffort == sampling,]
+    series <- sqldf("select scientificNameID, scientificName, decimalLatitude, decimalLongitude, count(*), min(year), max(year) from d group by scientificNameID, scientificName")
+    series <- series[rev(order(series$count)),]
+
+    species <- c("Cerataulina pelagica", "Ceratoneis closterium", "Leptocylindrus danicus")
+    for (sp in species) {
+      s <- d[d$scientificName==sp,]
+      mod <- gam(y ~ s(time, bs="tp", k=tknots, fx=tfix) + s(season, bs="cc", k=sknots, fx=sfix), 
+                 data=s, knots=list(season=seq(0, 1, length.out=sknots)))
+      grid.arrange(visreg(mod, "time", gg=TRUE, ylab=paste0("Model residuals (",sampling,")")), 
+                   visreg(mod, "season", gg=TRUE, ylab=paste0("Model residuals (",sampling,")")), ncol=2, top=sp)
+    }
+  }
+}
+plot_timeseries(dwca)
+```
+
+### Plot some Phylum statistics (1995-2004)
+
+```{r phylaplots, cache=TRUE}
+get_tax_phylum <- function(scientificNameId) {
+  if(grepl(":marinespecies.org:", scientificNameId)) {
+    taxid <- sub("urn:lsid:marinespecies.org:taxname:", "", scientificNameId)
+    
+    httr::content(httr::GET(paste0("http://api.iobis.org/taxon?aphiaid=",taxid)))$results[[1]]$phylum
+    
+    # cfs <- as.data.frame(wm_classification(as.integer(taxid)))
+    # cfs[cfs$rank == "Phylum", "scientificname"]
+  } else {
+    NA
+  }
+}
+#get_tax_phylum <- R.cache::addMemoization(get_tax_phylum)
+
+plot_phyla <- function(dwca) {
+  data <- dwca$data$occurrence.txt
+  if(!file.exists("~/.rcache/phyla_lter.rds")) {
+    phyla <- lapply(unique(data$scientificNameID), get_tax_phylum)
+    names(phyla) <- unique(data$scientificNameID)
+    saveRDS(phyla, "~/.rcache/phyla_lter.rds")
+  } else {
+    phyla <- readRDS("~/.rcache/phyla_lter.rds")
+  }
+
+  data <- data[!is.na(data$samplingEffort),]
+  data$year <- as.numeric(data$year)
+  data$month <- as.numeric(data$month)
+  data$day <- as.numeric(data$day)
+  data$time <- decimal_date(ymd(paste(data$year,data$month,data$day,sep="-")))
+  data$phylum <- sapply(data$scientificNameID, function(id) phyla[[id]])
+  data <- data[data$individualCount >= 0,]
+  data <- data[!is.na(data$phylum) & sapply(data$phylum, function(p) length(p) > 0),]
+  data$phylum <- unlist(data$phylum)
+  data$y <- data$individualCount
+  data$season <- data$time%%1
+
+  # number of sample of events per year per phyla
+  p <- ggplot(data, aes(x=as.factor(year), fill=phylum)) +
+    geom_histogram(stat="count") +
+    labs(x="Year", y="Number of records", fill="Phylum")
+  print(p)
+
+  # number of Chlorophyta records per month
+  d <- data[data$phylum == "Chlorophyta",]
+  d <- sqldf("select phylum, year, month, count(*) as n from d group by phylum, year, month")
+  d$yearmon <- d$year + ((d$month-1) / 12)
+  p <- ggplot(d, aes(x=yearmon, y=n)) +
+    geom_point() +
+    geom_smooth() +
+    #scale_x_continuous(name="Year", breaks=1995:2004, labels=1995:2004) +
+    labs(x="Year", y="Number of records", title="Chlorophyta")
+  print(p)
+
+  # ratio Ochrophyta / Myzozoa
+  sampling <- "cells/l"
+  d <- data[data$phylum %in% c("Ochrophyta", "Myzozoa"), c("phylum", "year", "individualCount")]
+  dsum <- sqldf("select phylum, year, sum(individualCount) as sum from d group by phylum, year order by year")
+  plotdata <- reshape(dsum, idvar = "year", timevar = "phylum", direction = "wide")
+  plotdata$ratio <- plotdata$sum.Ochrophyta / (plotdata$sum.Ochrophyta + plotdata$sum.Myzozoa)
+  p <- ggplot(plotdata, aes(x=year, y=ratio)) +
+    geom_smooth() +
+    geom_point() +
+    #scale_x_continuous(name="Year") +
+    labs(y="Ratio Ochrophyta - Myzozoa", title=sampling)
+  print(p)
+}
+plot_phyla(dwca)
+```
+
+# Data in OBIS
+
+```{r obissetup, warning=FALSE}
+library(robis)
+library(obistools)
+library(dplyr)
+library(leaflet)
+library(ggplot2)
+library(maps)
+library(dplyr)
+library(worrms)
+library(mregions)
+library(sf)
+```
+
+### Load the data
+
+```{r obis_disableoutput, include=FALSE}
+log_progress <- function(total, count) {
+}
+assignInNamespace("log_progress", log_progress, ns="robis") 
+```
+
+```{r loadobis, cache=TRUE}
+world <- map_data("world")
+calfin <- occurrence("Calanus finmarchicus")
+xy <- lookup_xy(calfin, shoredistance = FALSE, grids = TRUE, areas = FALSE)
+```
+
+### Plot number of records per year
+
+```{r calfinyear, warning=FALSE}
+calfin_yearcount <- calfin %>% count(yearcollected)
+ggplot(calfin_yearcount, aes(x=yearcollected, y=n)) +
+  geom_point()
+```
+
+### Plot environmental data
+
+```{r calfinssssst} 
+# salinity - temperature
+ggplot(xy[complete.cases(xy),], aes(x=sssalinity, y=sstemperature)) +
+  geom_point()
+```
+
+### Plot on map based on qc flag 27
+
+```{r calfinqc27}
+plot_qc <- function(data, qc, baseplot=NULL) {
+  data$qcnum <- as.factor(qcflags(data$qc, qc))
+  ggplot() +
+    geom_polygon(data = world, aes(x = long, y = lat, group = group), fill = "#dddddd") +
+    geom_point(data = data, aes(x = decimalLongitude, y = decimalLatitude, color = qcnum))
+}
+plot_qc(calfin, qc=27) # spatial outliers
+```
+
+### Plot on map based on the distribution in WoRMS  
+
+[See WoRMS for the distribution](http://marinespecies.org/aphia.php?p=taxdetails&id=104464#distributions)
+
+```{r calfinworms, results='hide', message=FALSE, warning=FALSE, error=FALSE}
+get_features <- function(mrid) {
+  wmsinfo <- httr::content(httr::GET(paste0("http://www.marineregions.org/rest/getGazetteerWMSes.json/", mrid, "/")))
+  if(length(wmsinfo) == 0) {
+    print(paste(mrid, "No wms found", wmsinfo))
+    return(list())
+  }
+  features <- list()
+  for(wms in wmsinfo) {
+    if(!grepl("wms[?]$", wms$url) && !grepl("gis[.]ngdc[.]noaa[.]gov", wms$url)) {
+      print(paste(mrid, "Url is no WMS", wms$url))
+    } else {
+      if(grepl("gis[.]ngdc[.]noaa[.]gov", wms$url)) {
+        wfs_url <- sub("/arcgis/services/", "/arcgis/rest/services/web_mercator/", wms$url)
+        wfs_url <- sub("/MapServer/WmsServer[?]$", "/MapServer/3/query?f=geojson&where=", wfs_url)
+        wfs_url <- paste0(wfs_url, wms$featureName,'%3D', wms$value)
+      } else {
+        wfs_url <- paste0(sub("wms[?]$", "wfs?", wms$url), "request=getfeature&version=1.1.0&service=wfs",
+                          "&typename=", wms$namespace, ':', wms$featureType, 
+                          '&CQL_FILTER=', tolower(wms$featureName), "='", wms$value, "'",
+                          "&outputFormat=application/json")
+      }
+      wfs_url <- URLencode(wfs_url)
+      tryCatch({
+          ft <- sf::read_sf(wfs_url)
+          if(nrow(ft) == 0) {
+            print(paste(mrid, "No feature found", wfs_url))
+          } else if(is.na(sf::st_crs(ft)$epsg)) {
+            print(paste(mrid, "CRS is NA", wfs_url))
+            # sf::st_crs(ft) <- 4326
+          } else if(sf::st_crs(ft)$epsg != 4326) {
+            print(paste(mrid, "CRS is not 4326", wfs_url))
+            ft <- sf::st_transform(ft, 4326)
+            features[[length(features)+1]] <- ft
+          } else if(st_bbox(ft)[1] < -180 || st_bbox(ft)[2] < -90 ||
+                    st_bbox(ft)[3] > 180 || st_bbox(ft)[4] > 90) {
+            print(paste(mrid, "Geom BBOX out of bounds", wfs_url))
+          } else {
+            features[[length(features)+1]] <- ft
+          }
+        },
+        error = function(e) print(paste(mrid, "WFS call failed", wfs_url, e))
+      )
+    }
+  }
+  features <- do.call(rbind, features)
+  features
+}
+
+check_worms_distribution <- function(data) {
+  worms_distribution <- worrms::wm_distribution(data$aphiaID[1])
+
+  accepted_ids <- c()
+  for (url in worms_distribution$locationID) {
+    mr <- httr::content(httr::GET(url))
+    accepted_ids <- c(accepted_ids, mr$accepted)
+  }
+  wfsfeatures <- lapply(unique(accepted_ids), get_features)
+  features <- wfsfeatures[-which(sapply(wfsfeatures, function(ft) is.null(ft) || length(ft) == 0))]
+  features <- lapply(features, function(ft) ft[,"geometry"])
+  features <- do.call(rbind, features)
+  datasf <- sf::st_as_sf(data, coords=c("decimalLongitude", "decimalLatitude"))
+  sf::st_crs(datasf) <- 4326
+  
+  intersecting <- sf::st_intersects(features, datasf)
+  list(features=features, ok=unique(unlist(intersecting)))
+}
+wormsdist <- check_worms_distribution(calfin)
+```
+```{r plotwormsdist}
+plot_all <- function(data) {
+  ggplot() +
+    geom_polygon(data = world, aes(x = long, y = lat, group = group), fill = "#dddddd") +
+    geom_point(data = data, aes(x = decimalLongitude, y = decimalLatitude))
+}
+calfin_ok <- calfin[wormsdist$ok, ]
+xy_ok <- xy[wormsdist$ok, ]
+plot_all(calfin_ok)
+
+#plot SST-Salinity OK
+ggplot(xy_ok[complete.cases(xy_ok),], aes(x=sssalinity, y=sstemperature)) +
+  geom_point()
+```
+
