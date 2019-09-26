@@ -1,0 +1,16 @@
+base
+robis
+dplyr
+ggplot2
+rnaturalearth
+sf
+RColorBrewer
+leaflet
+sp
+rgdal
+dggridR
+finch
+lubridate
+nlme
+mgcv
+obistools
