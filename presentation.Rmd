@@ -920,7 +920,7 @@ head(onland)
 ```{r, cache = TRUE}
 onland <- check_onland(fauna)
 plot_map(fauna, zoom = TRUE) +
-  geom_point(data = onland, aes(decimalLongitude, decimalLatitude), color = "green")
+  geom_point(data = onland, aes(decimalLongitude, decimalLatitude), color = "green", size = 2, stroke = 1)
 ```
 
 ---
