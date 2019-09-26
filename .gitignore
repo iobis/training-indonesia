@@ -2,4 +2,5 @@
 .Rhistory
 presentation_cache
 presentation_files
-
+dev.R
+temp

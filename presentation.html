@@ -766,28 +766,28 @@ map tool: <a href="https://obis.org/maptool" class="uri">https://obis.org/maptoo
 </thead>
 <tbody>
 <tr class="odd">
+<td>institutionCode</td>
+<td>name in use by the institution having custody of the object or information</td>
+<td>text</td>
+<td>NIWA</td>
+</tr>
+<tr class="even">
 <td>institutionID</td>
 <td>identifier for the institution having custody of the object or information</td>
 <td>URI</td>
 <td><a href="http://biocol.org/urn:lsid:biocol.org:col:34777" class="uri">http://biocol.org/urn:lsid:biocol.org:col:34777</a></td>
 </tr>
-<tr class="even">
-<td>institutionCode</td>
-<td>name in use by the institution having custody of the object or information</td>
-<td>text</td>
-<td>VLIZ</td>
-</tr>
 <tr class="odd">
-<td>collectionID</td>
-<td>identifier for the collection or dataset from which the record was derived</td>
-<td>URI</td>
-<td></td>
-</tr>
-<tr class="even">
 <td>collectionCode</td>
 <td>name identifying the collection or dataset from which the record was derived</td>
 <td>text</td>
-<td></td>
+<td>MAGNT_Echinoderm</td>
+</tr>
+<tr class="even">
+<td>collectionID</td>
+<td>identifier for the collection or dataset from which the record was derived</td>
+<td>URI</td>
+<td><a href="urn:lsid:biocol.org:col:35205" class="uri">urn:lsid:biocol.org:col:35205</a></td>
 </tr>
 <tr class="odd">
 <td>occurrenceID</td>
@@ -799,13 +799,13 @@ map tool: <a href="https://obis.org/maptool" class="uri">https://obis.org/maptoo
 <td>catalogNumber</td>
 <td>identifier for the record within the dataset or collection</td>
 <td>text</td>
-<td></td>
+<td>MarBEF/MacroBEN_475031</td>
 </tr>
 <tr class="odd">
 <td>fieldNumber</td>
 <td>identifier given to the event in the field</td>
 <td>text</td>
-<td></td>
+<td>475031</td>
 </tr>
 </tbody>
 </table>
@@ -966,6 +966,9 @@ map tool: <a href="https://obis.org/maptool" class="uri">https://obis.org/maptoo
 </section>
 <section id="data-publishing" class="slide level1">
 <h1>Data publishing</h1>
+</section>
+<section class="slide level1">
+
 <p><img data-src="images/schema.png" alt="schema" /></p>
 </section>
 <section class="slide level1">
@@ -1058,68 +1061,295 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 </section>
 <section class="slide level1">
 
+<p><a href="https://api.obis.org/occurrence?areaid=115&amp;scientificname=cetacea" class="uri">https://api.obis.org/occurrence?areaid=115&amp;scientificname=cetacea</a></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="er">total</span><span class="fu">:</span> <span class="dv">500</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="er">results</span><span class="fu">:</span> <span class="ot">[</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">    <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">      <span class="er">date_year</span><span class="fu">:</span> <span class="dv">1913</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">      <span class="er">scientificNameID</span><span class="fu">:</span> <span class="st">&quot;urn:lsid:marinespecies.org:taxname:137119&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">      <span class="er">scientificName</span><span class="fu">:</span> <span class="st">&quot;Physeter macrocephalus&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">      <span class="er">superfamilyid</span><span class="fu">:</span> <span class="dv">148723</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">      <span class="er">individualCount</span><span class="fu">:</span> <span class="st">&quot;1&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">      <span class="er">dropped</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">      <span class="er">associatedReferences</span><span class="fu">:</span> <span class="st">&quot;The distribution of certain whales as shown by logbook records of American wha[...]&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12">      <span class="er">aphiaID</span><span class="fu">:</span> <span class="dv">137119</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">      <span class="er">decimalLatitude</span><span class="fu">:</span> <span class="fl">-7.58614</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14">      <span class="er">subclassid</span><span class="fu">:</span> <span class="dv">380416</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15">      <span class="er">type</span><span class="fu">:</span> <span class="st">&quot;Event&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16">      <span class="er">taxonRemarks</span><span class="fu">:</span> <span class="st">&quot;Taxon recorded as sperm whale by the provider&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17">      <span class="er">phylumid</span><span class="fu">:</span> <span class="dv">1821</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-18" data-line-number="18">      <span class="er">familyid</span><span class="fu">:</span> <span class="dv">136985</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-19" data-line-number="19">      <span class="er">catalogNumber</span><span class="fu">:</span> <span class="st">&quot;885_22529&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-20" data-line-number="20">      <span class="er">occurrenceStatus</span><span class="fu">:</span> <span class="st">&quot;present&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-21" data-line-number="21">      <span class="er">basisOfRecord</span><span class="fu">:</span> <span class="st">&quot;HumanObservation&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-22" data-line-number="22">      <span class="er">superclass</span><span class="fu">:</span> <span class="st">&quot;Tetrapoda&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-23" data-line-number="23">      <span class="er">maximumDepthInMeters</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-24" data-line-number="24">      <span class="er">modified</span><span class="fu">:</span> <span class="st">&quot;2012-12-13 07:58:40&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-25" data-line-number="25">      <span class="er">id</span><span class="fu">:</span> <span class="st">&quot;00290724-aa9c-491a-90c1-fd996a203d26&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-26" data-line-number="26">      <span class="er">order</span><span class="fu">:</span> <span class="st">&quot;Cetartiodactyla&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-27" data-line-number="27">      <span class="er">recordNumber</span><span class="fu">:</span> <span class="st">&quot;885_22529&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-28" data-line-number="28">      <span class="er">georeferencedDate</span><span class="fu">:</span> <span class="st">&quot;1913-07-01T00:00:00&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-29" data-line-number="29">      <span class="er">superclassid</span><span class="fu">:</span> <span class="dv">1831</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-30" data-line-number="30">      <span class="er">infraorderid</span><span class="fu">:</span> <span class="dv">2688</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-31" data-line-number="31">      <span class="er">verbatimEventDate</span><span class="fu">:</span> <span class="st">&quot;1913-07-01 00:00:00&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-32" data-line-number="32">      <span class="er">dataset_id</span><span class="fu">:</span> <span class="st">&quot;a9848680-b804-455a-b6b5-2c5c1d0dbcde&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-33" data-line-number="33">      <span class="er">decimalLongitude</span><span class="fu">:</span> <span class="fl">104.99842</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-34" data-line-number="34">      <span class="er">date_end</span><span class="fu">:</span> <span class="dv">-1783123200000</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-35" data-line-number="35">      <span class="er">collectionCode</span><span class="fu">:</span> <span class="st">&quot;885&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-36" data-line-number="36">      <span class="er">speciesid</span><span class="fu">:</span> <span class="dv">137119</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-37" data-line-number="37">      <span class="er">occurrenceID</span><span class="fu">:</span> <span class="st">&quot;885_22529&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-38" data-line-number="38">      <span class="er">superfamily</span><span class="fu">:</span> <span class="st">&quot;Odontoceti&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-39" data-line-number="39">      <span class="er">suborderid</span><span class="fu">:</span> <span class="dv">370545</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-40" data-line-number="40">      <span class="er">license</span><span class="fu">:</span> <span class="st">&quot;http://creativecommons.org/licenses/by/4.0/&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-41" data-line-number="41">      <span class="er">date_start</span><span class="fu">:</span> <span class="dv">-1783123200000</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-42" data-line-number="42">      <span class="er">dateIdentified</span><span class="fu">:</span> <span class="st">&quot;1913-07-01T00:00:00&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-43" data-line-number="43">      <span class="er">genus</span><span class="fu">:</span> <span class="st">&quot;Physeter&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-44" data-line-number="44">      <span class="er">ownerInstitutionCode</span><span class="fu">:</span> <span class="st">&quot;Wildlife Conservation Society&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-45" data-line-number="45">      <span class="er">bibliographicCitation</span><span class="fu">:</span> <span class="st">&quot;The distribution of certain whales as shown by logbook records of American wha[...]&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-46" data-line-number="46">      <span class="er">eventDate</span><span class="fu">:</span> <span class="st">&quot;1913-07-01T00:00:00&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-47" data-line-number="47">      <span class="er">scientificNameAuthorship</span><span class="fu">:</span> <span class="st">&quot;Linnaeus, 1758&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-48" data-line-number="48">      <span class="er">absence</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-49" data-line-number="49">      <span class="er">taxonRank</span><span class="fu">:</span> <span class="st">&quot;Species&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-50" data-line-number="50">      <span class="er">genusid</span><span class="fu">:</span> <span class="dv">137032</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-51" data-line-number="51">      <span class="er">originalScientificName</span><span class="fu">:</span> <span class="st">&quot;Physeter macrocephalus&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-52" data-line-number="52">      <span class="er">marine</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-53" data-line-number="53">      <span class="er">minimumDepthInMeters</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-54" data-line-number="54">      <span class="er">subphylumid</span><span class="fu">:</span> <span class="dv">146419</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-55" data-line-number="55">      <span class="er">vernacularName</span><span class="fu">:</span> <span class="st">&quot;Sperm Whale&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-56" data-line-number="56">      <span class="er">institutionCode</span><span class="fu">:</span> <span class="st">&quot;Wildlife Conservation Society&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-57" data-line-number="57">      <span class="er">date_mid</span><span class="fu">:</span> <span class="dv">-1783123200000</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-58" data-line-number="58">      <span class="er">identificationRemarks</span><span class="fu">:</span> <span class="st">&quot;Identification Type:Visual sighting&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-59" data-line-number="59">      <span class="er">class</span><span class="fu">:</span> <span class="st">&quot;Mammalia&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-60" data-line-number="60">      <span class="er">infraorder</span><span class="fu">:</span> <span class="st">&quot;Cetacea&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-61" data-line-number="61">      <span class="er">suborder</span><span class="fu">:</span> <span class="st">&quot;Cetancodonta&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-62" data-line-number="62">      <span class="er">nomenclaturalCode</span><span class="fu">:</span> <span class="st">&quot;WoRMS LSID&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-63" data-line-number="63">      <span class="er">orderid</span><span class="fu">:</span> <span class="dv">370511</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-64" data-line-number="64">      <span class="er">footprintWKT</span><span class="fu">:</span> <span class="st">&quot;POINT(104.99842 -7.58614)&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-65" data-line-number="65">      <span class="er">datasetName</span><span class="fu">:</span> <span class="st">&quot;Historical distribution of whales shown by logbook records 1785-1913&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-66" data-line-number="66">      <span class="er">taxonomicStatus</span><span class="fu">:</span> <span class="st">&quot;valid&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-67" data-line-number="67">      <span class="er">geodeticDatum</span><span class="fu">:</span> <span class="st">&quot;EPSG:4326 WGS84&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-68" data-line-number="68">      <span class="er">waterBody</span><span class="fu">:</span> <span class="st">&quot;world&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-69" data-line-number="69">      <span class="er">kingdom</span><span class="fu">:</span> <span class="st">&quot;Animalia&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-70" data-line-number="70">      <span class="er">specificEpithet</span><span class="fu">:</span> <span class="st">&quot;macrocephalus&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-71" data-line-number="71">      <span class="er">classid</span><span class="fu">:</span> <span class="dv">1837</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-72" data-line-number="72">      <span class="er">phylum</span><span class="fu">:</span> <span class="st">&quot;Chordata&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-73" data-line-number="73">      <span class="er">species</span><span class="fu">:</span> <span class="st">&quot;Physeter macrocephalus&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-74" data-line-number="74">      <span class="er">coordinatePrecision</span><span class="fu">:</span> <span class="st">&quot;1.00000000000000008e-05&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-75" data-line-number="75">      <span class="er">subclass</span><span class="fu">:</span> <span class="st">&quot;Theria&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-76" data-line-number="76">      <span class="er">subphylum</span><span class="fu">:</span> <span class="st">&quot;Vertebrata&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-77" data-line-number="77">      <span class="er">datasetID</span><span class="fu">:</span> <span class="st">&quot;885&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-78" data-line-number="78">      <span class="er">occurrenceRemarks</span><span class="fu">:</span> <span class="st">&quot;Visual; boat&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-79" data-line-number="79">      <span class="er">family</span><span class="fu">:</span> <span class="st">&quot;Physeteridae&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-80" data-line-number="80">      <span class="er">category</span><span class="fu">:</span> <span class="st">&quot;VU&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-81" data-line-number="81">      <span class="er">kingdomid</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-82" data-line-number="82">      <span class="er">node_id</span><span class="fu">:</span> <span class="st">&quot;573654c1-4ce7-4ea2-b2f1-e4d42f8f9c31&quot;</span></a>
+<a class="sourceLine" id="cb3-83" data-line-number="83">    <span class="fu">}</span></a>
+<a class="sourceLine" id="cb3-84" data-line-number="84">  <span class="ot">]</span></a>
+<a class="sourceLine" id="cb3-85" data-line-number="85"><span class="fu">}</span></a></code></pre></div>
+</section>
+<section class="slide level1">
+
+<p><a href="https://api.obis.org/checklist?areaid=115&amp;scientificname=hexacorallia" class="uri">https://api.obis.org/checklist?areaid=115&amp;scientificname=hexacorallia</a></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">    <span class="er">total</span><span class="fu">:</span> <span class="dv">817</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">    <span class="er">results</span><span class="fu">:</span> <span class="ot">[</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">        <span class="fu">{</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">            <span class="er">scientificName</span><span class="fu">:</span> <span class="st">&quot;Acropora samoensis&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">            <span class="er">scientificNameAuthorship</span><span class="fu">:</span> <span class="st">&quot;(Brook, 1891)&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">            <span class="er">taxonID</span><span class="fu">:</span> <span class="dv">207055</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">            <span class="er">taxonRank</span><span class="fu">:</span> <span class="st">&quot;Species&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">            <span class="er">taxonomicStatus</span><span class="fu">:</span> <span class="st">&quot;accepted&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10">            <span class="er">acceptedNameUsage</span><span class="fu">:</span> <span class="st">&quot;Acropora samoensis&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11">            <span class="er">acceptedNameUsageID</span><span class="fu">:</span> <span class="dv">207055</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12">            <span class="er">is_marine</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13">            <span class="er">is_freshwater</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14">            <span class="er">is_terrestrial</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15">            <span class="er">kingdom</span><span class="fu">:</span> <span class="st">&quot;Animalia&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16">            <span class="er">phylum</span><span class="fu">:</span> <span class="st">&quot;Cnidaria&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17">            <span class="er">class</span><span class="fu">:</span> <span class="st">&quot;Anthozoa&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18">            <span class="er">subclass</span><span class="fu">:</span> <span class="st">&quot;Hexacorallia&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19">            <span class="er">order</span><span class="fu">:</span> <span class="st">&quot;Scleractinia&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-20" data-line-number="20">            <span class="er">family</span><span class="fu">:</span> <span class="st">&quot;Acroporidae&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21">            <span class="er">genus</span><span class="fu">:</span> <span class="st">&quot;Acropora&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-22" data-line-number="22">            <span class="er">species</span><span class="fu">:</span> <span class="st">&quot;Acropora samoensis&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-23" data-line-number="23">            <span class="er">kingdomid</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-24" data-line-number="24">            <span class="er">phylumid</span><span class="fu">:</span> <span class="dv">1267</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-25" data-line-number="25">            <span class="er">classid</span><span class="fu">:</span> <span class="dv">1292</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-26" data-line-number="26">            <span class="er">subclassid</span><span class="fu">:</span> <span class="dv">1340</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-27" data-line-number="27">            <span class="er">orderid</span><span class="fu">:</span> <span class="dv">1363</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-28" data-line-number="28">            <span class="er">familyid</span><span class="fu">:</span> <span class="dv">196095</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-29" data-line-number="29">            <span class="er">genusid</span><span class="fu">:</span> <span class="dv">205469</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-30" data-line-number="30">            <span class="er">speciesid</span><span class="fu">:</span> <span class="dv">207055</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-31" data-line-number="31">            <span class="er">records</span><span class="fu">:</span> <span class="dv">899</span></a>
+<a class="sourceLine" id="cb4-32" data-line-number="32">        <span class="fu">}</span><span class="ot">,</span></a>
+<a class="sourceLine" id="cb4-33" data-line-number="33">        <span class="fu">{</span></a>
+<a class="sourceLine" id="cb4-34" data-line-number="34">            <span class="er">scientificName</span><span class="fu">:</span> <span class="st">&quot;Acropora hyacinthus&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-35" data-line-number="35">            <span class="er">scientificNameAuthorship</span><span class="fu">:</span> <span class="st">&quot;(Dana, 1846)&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-36" data-line-number="36">            <span class="er">taxonID</span><span class="fu">:</span> <span class="dv">207044</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-37" data-line-number="37">            <span class="er">taxonRank</span><span class="fu">:</span> <span class="st">&quot;Species&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-38" data-line-number="38">            <span class="er">taxonomicStatus</span><span class="fu">:</span> <span class="st">&quot;accepted&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-39" data-line-number="39">            <span class="er">acceptedNameUsage</span><span class="fu">:</span> <span class="st">&quot;Acropora hyacinthus&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-40" data-line-number="40">            <span class="er">acceptedNameUsageID</span><span class="fu">:</span> <span class="dv">207044</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-41" data-line-number="41">            <span class="er">is_marine</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-42" data-line-number="42">            <span class="er">is_freshwater</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-43" data-line-number="43">            <span class="er">is_terrestrial</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-44" data-line-number="44">            <span class="er">kingdom</span><span class="fu">:</span> <span class="st">&quot;Animalia&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-45" data-line-number="45">            <span class="er">phylum</span><span class="fu">:</span> <span class="st">&quot;Cnidaria&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-46" data-line-number="46">            <span class="er">class</span><span class="fu">:</span> <span class="st">&quot;Anthozoa&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-47" data-line-number="47">            <span class="er">subclass</span><span class="fu">:</span> <span class="st">&quot;Hexacorallia&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-48" data-line-number="48">            <span class="er">order</span><span class="fu">:</span> <span class="st">&quot;Scleractinia&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-49" data-line-number="49">            <span class="er">family</span><span class="fu">:</span> <span class="st">&quot;Acroporidae&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-50" data-line-number="50">            <span class="er">genus</span><span class="fu">:</span> <span class="st">&quot;Acropora&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-51" data-line-number="51">            <span class="er">species</span><span class="fu">:</span> <span class="st">&quot;Acropora hyacinthus&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-52" data-line-number="52">            <span class="er">kingdomid</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-53" data-line-number="53">            <span class="er">phylumid</span><span class="fu">:</span> <span class="dv">1267</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-54" data-line-number="54">            <span class="er">classid</span><span class="fu">:</span> <span class="dv">1292</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-55" data-line-number="55">            <span class="er">subclassid</span><span class="fu">:</span> <span class="dv">1340</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-56" data-line-number="56">            <span class="er">orderid</span><span class="fu">:</span> <span class="dv">1363</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-57" data-line-number="57">            <span class="er">familyid</span><span class="fu">:</span> <span class="dv">196095</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-58" data-line-number="58">            <span class="er">genusid</span><span class="fu">:</span> <span class="dv">205469</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-59" data-line-number="59">            <span class="er">speciesid</span><span class="fu">:</span> <span class="dv">207044</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-60" data-line-number="60">            <span class="er">category</span><span class="fu">:</span> <span class="st">&quot;NT&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb4-61" data-line-number="61">            <span class="er">records</span><span class="fu">:</span> <span class="dv">485</span></a>
+<a class="sourceLine" id="cb4-62" data-line-number="62">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb4-63" data-line-number="63">    <span class="ot">]</span></a>
+<a class="sourceLine" id="cb4-64" data-line-number="64"><span class="fu">}</span></a></code></pre></div>
+</section>
+<section class="slide level1">
+
+<p><a href="https://api.obis.org/dataset?areaid=115&amp;startdate=2017-01-01" class="uri">https://api.obis.org/dataset?areaid=115&amp;startdate=2017-01-01</a></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">    <span class="er">total</span><span class="fu">:</span> <span class="dv">5</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">    <span class="er">results</span><span class="fu">:</span> <span class="ot">[</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">        <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">            <span class="er">id</span><span class="fu">:</span> <span class="st">&quot;777e539e-abf1-4e6d-afa1-9b8452c739da&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">            <span class="er">url</span><span class="fu">:</span> <span class="st">&quot;http://ipt.env.duke.edu/resource?r=zd_1296_1deg&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7">            <span class="er">archive</span><span class="fu">:</span> <span class="st">&quot;http://ipt.env.duke.edu/archive.do?r=zd_1296_1deg&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8">            <span class="er">published</span><span class="fu">:</span> <span class="st">&quot;2019-05-07T08:38:26.000Z&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9">            <span class="er">updated</span><span class="fu">:</span> <span class="st">&quot;2019-07-12T15:28:03.650Z&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10">            <span class="er">title</span><span class="fu">:</span> <span class="st">&quot;Ningaloo Outlook Whale Shark tracking (aggregated per 1-degree cell)&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11">            <span class="er">citation</span><span class="fu">:</span> <span class="st">&quot;Pillans R. 2019. Ningaloo Outlook Whale Shark tracking. Data downloaded from OBIS-SEAMAP (http://seamap.env.duke.edu/dataset/1296) on yyyy-mm-dd originated from Satellite Tracking and Analysis Tool (STAT; http://www.seaturtle.org/tracking/index.shtml?project_id=1112).&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-12" data-line-number="12">            <span class="er">abstract</span><span class="fu">:</span> <span class="st">&quot;Original provider: CSIRO Dataset credits: Data provider Bardi Jawi Turtle Tracking Originating data center &lt;a href=&quot;</span><span class="er">http://www.seaturtle.org/tracking/</span><span class="st">&quot;&gt;Satellite Tracking and Analysis Tool (STAT)&lt;/a&gt; Project partner Western Australia Department of Parks and Wildlife Abstract: CSIRO and BHP Billiton have established a five-year research alliance to complement existing research and monitoring efforts at Ningaloo and to ensure the conservation and sustainable use of Ningaloo Reef. The research alliance comprises a comprehensive and integrated research program that includes three distinct research Themes (Deep Reefs, Shallow Reefs, Tagging Turtles and Sharks), as well as training of the next generation of scientists through a PhD Scholarship Scheme, and engagement with the local community. Supplemental information: &lt;a href=&quot;</span><span class="er">http://www.seaturtle.org/tracking/index.shtml?project_id=</span><span class="dv">1112</span><span class="st">&quot;&gt;Visit STAT&#39;s project page&lt;/a&gt; for additional information. This dataset is a summarized representation of the telemetry locations aggregated per species per 1-degree cell.&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13">            <span class="er">intellectualrights</span><span class="fu">:</span> <span class="st">&quot;This work is licensed under a Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14">            <span class="er">feed</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15">                <span class="er">id</span><span class="fu">:</span> <span class="st">&quot;18954703-9b9d-4584-b46d-87846532c5ee&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-16" data-line-number="16">                <span class="er">url</span><span class="fu">:</span> <span class="st">&quot;https://ipt.env.duke.edu/rss.do&quot;</span></a>
+<a class="sourceLine" id="cb5-17" data-line-number="17">            <span class="fu">},</span></a>
+<a class="sourceLine" id="cb5-18" data-line-number="18">            <span class="er">institutes</span><span class="fu">:</span> <span class="ot">[</span></a>
+<a class="sourceLine" id="cb5-19" data-line-number="19">                <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-20" data-line-number="20">                    <span class="er">name</span><span class="fu">:</span> <span class="st">&quot;Duke University&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-21" data-line-number="21">                    <span class="er">oceanexpert_id</span><span class="fu">:</span> <span class="dv">19393</span></a>
+<a class="sourceLine" id="cb5-22" data-line-number="22">                <span class="fu">}</span></a>
+<a class="sourceLine" id="cb5-23" data-line-number="23">            <span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-24" data-line-number="24">            <span class="er">contacts</span><span class="fu">:</span> <span class="ot">[</span></a>
+<a class="sourceLine" id="cb5-25" data-line-number="25">                <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-26" data-line-number="26">                    <span class="er">type</span><span class="fu">:</span> <span class="st">&quot;creator&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-27" data-line-number="27">                    <span class="er">givenname</span><span class="fu">:</span> <span class="st">&quot;Richard&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-28" data-line-number="28">                    <span class="er">surname</span><span class="fu">:</span> <span class="st">&quot;Pillans&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-29" data-line-number="29">                    <span class="er">organization</span><span class="fu">:</span> <span class="st">&quot;Bardi Jawi Turtle Tracking&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-30" data-line-number="30">                    <span class="er">position</span><span class="fu">:</span> <span class="st">&quot;Primary contact&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-31" data-line-number="31">                    <span class="er">email</span><span class="fu">:</span> <span class="st">&quot;richard.pillans@csiro.au&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-32" data-line-number="32">                    <span class="er">type_display</span><span class="fu">:</span> <span class="st">&quot;Creator&quot;</span></a>
+<a class="sourceLine" id="cb5-33" data-line-number="33">                <span class="fu">}</span><span class="ot">,</span></a>
+<a class="sourceLine" id="cb5-34" data-line-number="34">                <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-35" data-line-number="35">                    <span class="er">type</span><span class="fu">:</span> <span class="st">&quot;contact&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-36" data-line-number="36">                    <span class="er">givenname</span><span class="fu">:</span> <span class="st">&quot;Richard&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-37" data-line-number="37">                    <span class="er">surname</span><span class="fu">:</span> <span class="st">&quot;Pillans&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-38" data-line-number="38">                    <span class="er">organization</span><span class="fu">:</span> <span class="st">&quot;Bardi Jawi Turtle Tracking&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-39" data-line-number="39">                    <span class="er">position</span><span class="fu">:</span> <span class="st">&quot;Primary contact&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-40" data-line-number="40">                    <span class="er">email</span><span class="fu">:</span> <span class="st">&quot;richard.pillans@csiro.au&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-41" data-line-number="41">                    <span class="er">type_display</span><span class="fu">:</span> <span class="st">&quot;Contact&quot;</span></a>
+<a class="sourceLine" id="cb5-42" data-line-number="42">                <span class="fu">}</span><span class="ot">,</span></a>
+<a class="sourceLine" id="cb5-43" data-line-number="43">                <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-44" data-line-number="44">                    <span class="er">type</span><span class="fu">:</span> <span class="st">&quot;metadataProvider&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-45" data-line-number="45">                    <span class="er">surname</span><span class="fu">:</span> <span class="st">&quot;OBIS-SEAMAP&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-46" data-line-number="46">                    <span class="er">organization</span><span class="fu">:</span> <span class="st">&quot;Marine Geospatial Ecology Lab, Duke University&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-47" data-line-number="47">                    <span class="er">email</span><span class="fu">:</span> <span class="st">&quot;seamap-contact@duke.edu&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-48" data-line-number="48">                    <span class="er">url</span><span class="fu">:</span> <span class="st">&quot;http://seamap.env.duke.edu&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-49" data-line-number="49">                    <span class="er">organization_oceanexpert_id</span><span class="fu">:</span> <span class="dv">19393</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-50" data-line-number="50">                    <span class="er">type_display</span><span class="fu">:</span> <span class="st">&quot;Metadata Provider&quot;</span></a>
+<a class="sourceLine" id="cb5-51" data-line-number="51">                <span class="fu">}</span></a>
+<a class="sourceLine" id="cb5-52" data-line-number="52">            <span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-53" data-line-number="53">            <span class="er">nodes</span><span class="fu">:</span> <span class="ot">[</span></a>
+<a class="sourceLine" id="cb5-54" data-line-number="54">                <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-55" data-line-number="55">                    <span class="er">id</span><span class="fu">:</span> <span class="st">&quot;573654c1-4ce7-4ea2-b2f1-e4d42f8f9c31&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-56" data-line-number="56">                    <span class="er">name</span><span class="fu">:</span> <span class="st">&quot;OBIS-SEAMAP&quot;</span></a>
+<a class="sourceLine" id="cb5-57" data-line-number="57">                <span class="fu">}</span></a>
+<a class="sourceLine" id="cb5-58" data-line-number="58">            <span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-59" data-line-number="59">            <span class="er">records</span><span class="fu">:</span> <span class="dv">26</span></a>
+<a class="sourceLine" id="cb5-60" data-line-number="60">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb5-61" data-line-number="61">    <span class="ot">]</span></a>
+<a class="sourceLine" id="cb5-62" data-line-number="62"><span class="fu">}</span></a></code></pre></div>
+</section>
+<section class="slide level1">
+
 <h2 id="data-access-r-package">Data access: R package</h2>
 <p><a href="https://github.com/iobis/robis" class="uri">https://github.com/iobis/robis</a></p>
 </section>
 <section class="slide level1">
 
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(robis)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">occ &lt;-<span class="st"> </span><span class="kw">occurrence</span>(<span class="dt">areaid =</span> <span class="dv">115</span>) <span class="co"># fetch occurrences</span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="kw">str</span>(occ) <span class="co"># display structure</span></a></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    131591 obs. of  194 variables:
-##  $ date_year                          : int  2011 1982 NA 1985 NA 2013 NA NA 1995 1969 ...
+<h3 id="r-fetching-and-plotting-occurrences">R: fetching and plotting occurrences</h3>
+</section>
+<section class="slide level1">
+
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(robis)</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">occ &lt;-<span class="st"> </span><span class="kw">occurrence</span>(<span class="dt">areaid =</span> <span class="dv">115</span>) <span class="co"># fetch occurrences</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="kw">str</span>(occ) <span class="co"># display structure</span></a></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    123645 obs. of  194 variables:
+##  $ date_year                          : int  2011 1982 NA 1985 2013 NA NA 1995 1969 1970 ...
 ##  $ scientificNameID                   : chr  &quot;urn:lsid:marinespecies.org:taxname:205732&quot; &quot;urn:lsid:marinespecies.org:taxname:268045&quot; &quot;urn:lsid:marinespecies.org:taxname:207035&quot; &quot;urn:lsid:marinespecies.org:taxname:105453&quot; ...
 ##  $ scientificName                     : chr  &quot;Pleurosicya&quot; &quot;Zonosagitta pulchra&quot; &quot;Acropora intermedia&quot; &quot;Flaccisagitta hexaptera&quot; ...
 ##  $ individualCount                    : chr  &quot;1&quot; NA NA NA ...
 ##  $ dropped                            : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
-##  $ aphiaID                            : int  205732 266888 207035 105435 213285 218395 204105 409001 207113 719263 ...
+##  $ aphiaID                            : int  205732 266888 207035 105435 218395 204105 207675 207113 719263 208010 ...
 ##  $ fieldNumber                        : chr  &quot;Chordata&quot; &quot;6099&quot; NA &quot;6563&quot; ...
-##  $ decimalLatitude                    : num  -8.28 2 2.82 2.03 -2.13 ...
-##  $ familyid                           : int  125537 5953 196095 5953 149871 125523 160268 136092 196095 196896 ...
-##  $ phylumid                           : int  1821 2081 1267 2081 1806 1821 1065 1065 1267 51 ...
+##  $ decimalLatitude                    : num  -8.28 2 2.82 2.03 -8.28 ...
+##  $ familyid                           : int  125537 5953 196095 5953 125523 160268 229 196095 196896 23129 ...
+##  $ phylumid                           : int  1821 2081 1267 2081 1821 1065 51 1267 51 51 ...
 ##  $ catalogNumber                      : chr  &quot;P33400.004&quot; &quot;41080&quot; &quot;G48157&quot; &quot;51904&quot; ...
 ##  $ occurrenceStatus                   : chr  &quot;present&quot; &quot;present&quot; NA &quot;present&quot; ...
-##  $ terrestrial                        : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+##  $ terrestrial                        : logi  FALSE FALSE FALSE FALSE FALSE NA ...
 ##  $ basisOfRecord                      : chr  &quot;PreservedSpecimen&quot; &quot;PreservedSpecimen&quot; &quot;HumanObservation&quot; &quot;PreservedSpecimen&quot; ...
 ##  $ superclass                         : chr  &quot;Pisces&quot; NA NA NA ...
-##  $ maximumDepthInMeters               : num  50 152 NA 140 20 18.8 NA NA NA NA ...
+##  $ maximumDepthInMeters               : num  50 152 NA 140 18.8 NA NA NA NA 64 ...
 ##  $ modified                           : chr  &quot;2017-02-10T16:32:59&quot; &quot;2018-12-26T15:00:07+09:00&quot; NA &quot;2018-12-26T15:00:07+09:00&quot; ...
 ##  $ id                                 : chr  &quot;00007ba8-397e-4559-9858-edb669ced4da&quot; &quot;0000f7c4-f297-45ef-b870-fcf7e5b06fe3&quot; &quot;00017877-e75a-45da-a36e-75c1344cae7d&quot; &quot;00018993-a5de-4405-bb44-35bd11e0a667&quot; ...
 ##  $ order                              : chr  &quot;Perciformes&quot; &quot;Aphragmophora&quot; &quot;Scleractinia&quot; &quot;Aphragmophora&quot; ...
 ##  $ organismQuantity                   : chr  &quot;1&quot; NA NA NA ...
-##  $ superclassid                       : int  11676 NA NA NA NA 11676 NA 845959 NA NA ...
+##  $ superclassid                       : int  11676 NA NA NA 11676 NA NA NA NA NA ...
 ##  $ dataset_id                         : chr  &quot;f8c046f0-e8ae-49f5-b94c-f78809a8b7dc&quot; &quot;f6e5b0ee-d645-40fc-a433-17fd8965c941&quot; &quot;c380d2c9-98b3-48cf-af6c-56a88b81f1a4&quot; &quot;f6e5b0ee-d645-40fc-a433-17fd8965c941&quot; ...
 ##  $ locality                           : chr  &quot;Kalabahi Bay&quot; NA NA NA ...
-##  $ decimalLongitude                   : num  124 137 125 137 130 ...
-##  $ date_end                           : num  1.30e+12 3.94e+11 NA 4.76e+11 NA ...
+##  $ decimalLongitude                   : num  124 137 125 137 116 ...
+##  $ date_end                           : num  1.30e+12 3.94e+11 NA 4.76e+11 1.38e+12 ...
 ##  $ collectionCode                     : chr  &quot;co77&quot; &quot;J-DOSS&quot; &quot;HEX&quot; &quot;J-DOSS&quot; ...
 ##  $ occurrenceID                       : chr  &quot;P33400.004&quot; &quot;urn:catalog:JODC:J-DOSS:41080&quot; NA &quot;urn:catalog:JODC:J-DOSS:51904&quot; ...
-##  $ suborderid                         : int  151743 NA NA NA NA 151751 151134 148540 NA NA ...
-##  $ date_start                         : num  1.30e+12 3.94e+11 NA 4.76e+11 NA ...
+##  $ suborderid                         : int  151743 NA NA NA 151751 151134 NA NA NA NA ...
+##  $ date_start                         : num  1.30e+12 3.94e+11 NA 4.76e+11 1.38e+12 ...
 ##  $ organismQuantityType               : chr  &quot;individuals&quot; NA NA NA ...
 ##  $ genus                              : chr  &quot;Pleurosicya&quot; &quot;Zonosagitta&quot; &quot;Acropora&quot; &quot;Flaccisagitta&quot; ...
 ##  $ eventDate                          : chr  &quot;2011-03-28&quot; &quot;1982-07-01T15:18:00Z&quot; NA &quot;1985-01-30T02:24:00Z&quot; ...
-##  $ brackish                           : logi  TRUE FALSE NA FALSE FALSE TRUE ...
+##  $ brackish                           : logi  TRUE FALSE NA FALSE TRUE TRUE ...
 ##  $ subfamily                          : chr  &quot;Gobiinae&quot; NA NA NA ...
 ##  $ absence                            : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
 ##  $ taxonRank                          : chr  &quot;genus&quot; &quot;species&quot; NA &quot;species&quot; ...
-##  $ genusid                            : int  205732 264951 205469 105406 206421 159473 204105 408999 205469 578844 ...
+##  $ genusid                            : int  205732 264951 205469 105406 159473 204105 205753 205469 578844 138557 ...
 ##  $ originalScientificName             : chr  &quot;Pleurosicya&quot; &quot;Sagitta pulchra&quot; &quot;Acropora acropora intermedia&quot; &quot;Sagitta hexaptera&quot; ...
 ##  $ marine                             : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
-##  $ minimumDepthInMeters               : num  38 0 NA 0 0 0 NA NA NA NA ...
-##  $ subphylumid                        : int  146419 NA NA NA 148743 146419 1278 1066 NA NA ...
-##  $ subfamilyid                        : int  267094 NA NA NA NA NA 493939 NA NA 1052974 ...
+##  $ minimumDepthInMeters               : num  38 0 NA 0 0 NA NA NA NA 55 ...
+##  $ subphylumid                        : int  146419 NA NA NA 146419 1278 NA NA NA NA ...
+##  $ subfamilyid                        : int  267094 NA NA NA NA 493939 382150 NA 1052974 NA ...
 ##  $ institutionCode                    : chr  &quot;WAM&quot; &quot;JODC&quot; &quot;HEX&quot; &quot;JODC&quot; ...
-##  $ date_mid                           : num  1.30e+12 3.94e+11 NA 4.76e+11 NA ...
+##  $ date_mid                           : num  1.30e+12 3.94e+11 NA 4.76e+11 1.38e+12 ...
 ##  $ class                              : chr  &quot;Actinopterygii&quot; &quot;Sagittoidea&quot; &quot;Anthozoa&quot; &quot;Sagittoidea&quot; ...
 ##  $ suborder                           : chr  &quot;Gobioidei&quot; NA NA NA ...
-##  $ orderid                            : int  11014 5950 1363 5950 123090 11014 118089 14355 1363 1052448 ...
+##  $ orderid                            : int  11014 5950 1363 5950 11014 118089 869602 1363 1052448 382213 ...
 ##  $ footprintWKT                       : chr  &quot;POINT (124.41667 -8.28333)&quot; NA NA NA ...
 ##  $ geodeticDatum                      : chr  &quot;EPSG:4326&quot; NA NA NA ...
 ##  $ kingdom                            : chr  &quot;Animalia&quot; &quot;Animalia&quot; &quot;Animalia&quot; &quot;Animalia&quot; ...
 ##  $ specificEpithet                    : chr  &quot;sp.&quot; NA NA NA ...
-##  $ classid                            : int  10194 5949 1292 5949 123080 10194 1307 1071 1292 101 ...
+##  $ classid                            : int  10194 5949 1292 5949 10194 1307 105 1292 101 101 ...
 ##  $ phylum                             : chr  &quot;Chordata&quot; &quot;Chaetognatha&quot; &quot;Cnidaria&quot; &quot;Chaetognatha&quot; ...
 ##  $ coordinatePrecision                : chr  &quot;100000&quot; NA NA NA ...
 ##  $ subphylum                          : chr  &quot;Vertebrata&quot; NA NA NA ...
@@ -1131,7 +1361,7 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 ##  $ language                           : chr  NA &quot;en&quot; NA &quot;en&quot; ...
 ##  $ day                                : chr  NA &quot;1&quot; NA &quot;30&quot; ...
 ##  $ endDayOfYear                       : chr  NA &quot;182&quot; NA &quot;30&quot; ...
-##  $ speciesid                          : int  NA 266888 207035 105435 213285 218395 NA 409001 207113 719263 ...
+##  $ speciesid                          : int  NA 266888 207035 105435 218395 NA 207675 207113 719263 208010 ...
 ##  $ license                            : chr  NA &quot;http://creativecommons.org/licenses/by-nc/4.0/legalcode&quot; NA &quot;http://creativecommons.org/licenses/by-nc/4.0/legalcode&quot; ...
 ##  $ footprintSRS                       : chr  NA &quot;GEOGCS[\&quot;GCS_WGS_1984\&quot;,DATUM[\&quot;D_WGS_1984\&quot;,SPHEROID[\&quot;WGS_1984\&quot;,6378137,298.257223563]],PRIMEM[\&quot;Greenwich\&quot;&quot;| __truncated__ NA &quot;GEOGCS[\&quot;GCS_WGS_1984\&quot;,DATUM[\&quot;D_WGS_1984\&quot;,SPHEROID[\&quot;WGS_1984\&quot;,6378137,298.257223563]],PRIMEM[\&quot;Greenwich\&quot;&quot;| __truncated__ ...
 ##  $ month                              : chr  NA &quot;7&quot; NA &quot;1&quot; ...
@@ -1145,39 +1375,39 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 ##  $ species                            : chr  NA &quot;Zonosagitta pulchra&quot; &quot;Acropora intermedia&quot; &quot;Flaccisagitta hexaptera&quot; ...
 ##  $ startDayOfYear                     : chr  NA &quot;182&quot; NA &quot;30&quot; ...
 ##  $ occurrenceRemarks                  : chr  NA &quot;Observed Individual Count : 1/m3 ; Water Filtered Volume :37.1m3&quot; NA &quot;Observed Individual Count : 1/m3 ; Water Filtered Volume :33.6m3&quot; ...
-##  $ subclassid                         : int  NA NA 1340 NA NA NA 151152 1087 1340 156485 ...
+##  $ subclassid                         : int  NA NA 1340 NA NA 151152 216 1340 156485 224570 ...
 ##  $ subclass                           : chr  NA NA &quot;Hexacorallia&quot; NA ...
 ##  $ country                            : chr  NA NA NA NA ...
-##  $ habitat                            : chr  NA NA NA NA ...
-##  $ type                               : chr  NA NA NA NA ...
-##  $ establishmentMeans                 : chr  NA NA NA NA ...
-##  $ materialSampleID                   : chr  NA NA NA NA ...
-##  $ superorder                         : chr  NA NA NA NA ...
-##  $ coordinateUncertaintyInMeters      : chr  NA NA NA NA ...
-##  $ superorderid                       : int  NA NA NA NA 582528 NA NA NA NA NA ...
-##  $ vernacularName                     : chr  NA NA NA NA ...
-##  $ identificationRemarks              : chr  NA NA NA NA ...
-##  $ georeferenceProtocol               : chr  NA NA NA NA ...
-##  $ recordedBy                         : chr  NA NA NA NA ...
-##  $ lifeStage                          : chr  NA NA NA NA ...
 ##  $ minimumElevationInMeters           : chr  NA NA NA NA ...
 ##  $ georeferenceRemarks                : chr  NA NA NA NA ...
 ##  $ maximumElevationInMeters           : chr  NA NA NA NA ...
 ##  $ continent                          : chr  NA NA NA NA ...
 ##  $ scientificNameAuthorship           : chr  NA NA NA NA ...
+##  $ recordedBy                         : chr  NA NA NA NA ...
 ##  $ datasetID                          : chr  NA NA NA NA ...
 ##  $ dynamicProperties                  : chr  NA NA NA NA ...
+##  $ infraorder                         : chr  NA NA NA NA ...
+##  $ infraorderid                       : int  NA NA NA NA NA 869434 NA NA NA NA ...
+##  $ superfamilyid                      : int  NA NA NA NA NA NA 14633 NA 156489 14777 ...
+##  $ type                               : chr  NA NA NA NA ...
+##  $ materialSampleID                   : chr  NA NA NA NA ...
+##  $ superfamily                        : chr  NA NA NA NA ...
+##  $ superorder                         : chr  NA NA NA NA ...
+##  $ coordinateUncertaintyInMeters      : chr  NA NA NA NA ...
+##  $ superorderid                       : int  NA NA NA NA NA NA 869600 NA NA NA ...
+##  $ infraclassid                       : int  NA NA NA NA NA NA 382296 NA NA NA ...
+##  $ identificationRemarks              : chr  NA NA NA NA ...
 ##   [list output truncated]</code></pre>
 </section>
 <section class="slide level1">
 
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3">stations &lt;-<span class="st"> </span>occ <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="st">  </span><span class="kw">group_by</span>(decimalLongitude, decimalLatitude) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">records =</span> <span class="kw">n</span>())</a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="kw">head</span>(stations) <span class="co"># inspect first rows</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">stations &lt;-<span class="st"> </span>occ <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="st">  </span><span class="kw">group_by</span>(decimalLongitude, decimalLatitude) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">records =</span> <span class="kw">n</span>())</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="kw">head</span>(stations) <span class="co"># inspect first rows</span></a></code></pre></div>
 <pre><code>## # A tibble: 6 x 3
 ## # Groups:   decimalLongitude [6]
 ##   decimalLongitude decimalLatitude records
@@ -1191,27 +1421,28 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 </section>
 <section class="slide level1">
 
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw">library</span>(rnaturalearth)</a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="kw">library</span>(sf)</a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb7-5" data-line-number="5">world &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">country =</span> <span class="st">&quot;indonesia&quot;</span>, <span class="dt">scale =</span> <span class="st">&quot;large&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="kw">ggplot</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> world, <span class="dt">fill =</span> <span class="st">&quot;#000000&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_point</span>(</a>
-<a class="sourceLine" id="cb7-10" data-line-number="10">    <span class="dt">data =</span> stations <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(records),</a>
-<a class="sourceLine" id="cb7-11" data-line-number="11">    <span class="kw">aes</span>(<span class="dt">x =</span> decimalLongitude, <span class="dt">y =</span> decimalLatitude, <span class="dt">color =</span> records), <span class="dt">size =</span> <span class="fl">0.8</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="st">  </span><span class="kw">scale_color_viridis_c</span>(<span class="dt">trans =</span> <span class="st">&quot;log10&quot;</span>, <span class="dt">option =</span> <span class="st">&quot;plasma&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="st">  </span><span class="kw">coord_sf</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;OBIS occurrence records in Indonesia&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="kw">library</span>(rnaturalearth)</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">library</span>(sf)</a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb10-5" data-line-number="5">world &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">country =</span> <span class="st">&quot;indonesia&quot;</span>, <span class="dt">scale =</span> <span class="st">&quot;large&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</a>
+<a class="sourceLine" id="cb10-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="kw">ggplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> world, <span class="dt">fill =</span> <span class="st">&quot;#000000&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_point</span>(</a>
+<a class="sourceLine" id="cb10-10" data-line-number="10">    <span class="dt">data =</span> stations <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(records),</a>
+<a class="sourceLine" id="cb10-11" data-line-number="11">    <span class="kw">aes</span>(<span class="dt">x =</span> decimalLongitude, <span class="dt">y =</span> decimalLatitude, <span class="dt">color =</span> records), <span class="dt">size =</span> <span class="fl">0.8</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="st">  </span><span class="kw">scale_color_viridis_c</span>(<span class="dt">trans =</span> <span class="st">&quot;log10&quot;</span>, <span class="dt">option =</span> <span class="st">&quot;plasma&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="st">  </span><span class="kw">coord_sf</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;OBIS occurrence records in Indonesia&quot;</span>)</a></code></pre></div>
 </section>
 <section class="slide level1">
 
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.2</code></pre>
-<pre><code>## Warning: package &#39;sf&#39; was built under R version 3.5.2</code></pre>
-<pre><code>## Linking to GEOS 3.7.2, GDAL 2.4.2, PROJ 5.2.0</code></pre>
 <p><img src="presentation_files/figure-revealjs/map_indonesia-1.png" width="960" /></p>
+</section>
+<section class="slide level1">
+
+<h3 id="r-plotting-statistics">R: plotting statistics</h3>
 </section>
 <section class="slide level1">
 
@@ -1230,28 +1461,34 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 </section>
 <section class="slide level1">
 
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">library</span>(leaflet)</a>
-<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="kw">library</span>(robis)</a>
-<a class="sourceLine" id="cb12-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="co"># fetch invasives occurrences</span></a>
-<a class="sourceLine" id="cb12-5" data-line-number="5">invasives &lt;-<span class="st"> </span><span class="kw">occurrence</span>(</a>
-<a class="sourceLine" id="cb12-6" data-line-number="6">  <span class="dt">scientificname =</span> <span class="kw">c</span>(<span class="st">&quot;Acanthaster planci&quot;</span>, <span class="st">&quot;Pterois volitans&quot;</span>),</a>
-<a class="sourceLine" id="cb12-7" data-line-number="7">  <span class="dt">areaid =</span> <span class="dv">115</span></a>
-<a class="sourceLine" id="cb12-8" data-line-number="8">)</a>
-<a class="sourceLine" id="cb12-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb12-10" data-line-number="10"><span class="co"># interactive map</span></a>
-<a class="sourceLine" id="cb12-11" data-line-number="11"><span class="kw">leaflet</span>(invasives) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb12-12" data-line-number="12"><span class="st">  </span><span class="kw">addProviderTiles</span>(<span class="st">&quot;Esri.WorldGrayCanvas&quot;</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb12-13" data-line-number="13"><span class="st">  </span><span class="kw">addCircleMarkers</span>(</a>
-<a class="sourceLine" id="cb12-14" data-line-number="14">    <span class="op">~</span>decimalLongitude, <span class="op">~</span>decimalLatitude, <span class="dt">weight =</span> <span class="dv">1</span>, <span class="dt">opacity =</span> <span class="dv">1</span>, <span class="dt">fillOpacity =</span> <span class="fl">0.3</span>, <span class="dt">stroke =</span> <span class="ot">FALSE</span>,</a>
-<a class="sourceLine" id="cb12-15" data-line-number="15">    <span class="dt">color =</span> <span class="op">~</span><span class="kw">ifelse</span>(scientificName <span class="op">==</span><span class="st"> &quot;Acanthaster planci&quot;</span>, <span class="st">&quot;#a2cf4a&quot;</span>, <span class="st">&quot;#cf4a9e&quot;</span>),</a>
-<a class="sourceLine" id="cb12-16" data-line-number="16">    <span class="dt">radius =</span> <span class="op">~</span><span class="kw">ifelse</span>(<span class="op">!</span><span class="kw">is.na</span>(date_year) <span class="op">&amp;</span><span class="st"> </span>date_year <span class="op">&gt;</span><span class="st"> </span><span class="dv">2000</span>, <span class="dv">10</span>, <span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb12-17" data-line-number="17">  )</a></code></pre></div>
+<h3 id="r-interactive-maps">R: interactive maps</h3>
 </section>
 <section class="slide level1">
 
-<div id="htmlwidget-8e9e3b082d4b1e99b265" style="width:576px;height:384px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8e9e3b082d4b1e99b265">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldGrayCanvas",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[-2.391,-8.35197,-8.626525,-1.905283,-0.878271,-5.711,-6.091944,-8.27535,-0.131084,-6.05862,-5.106324,-5.889767,-5.106324,-2.391,-0.131084,-5.708783,-8.27,-1.011629,-3.661,-5.708783,-1.905283,-1.011629,-5.71076,0.75345,-1.011629,-5.71076,-2.937801,-2.391,-8.515,-0.131084,-2.937801,-0.131084,-1.189,-8.515,-0.0291700009257,-5.708783,-1.011629,-1.189,1.85333001614,-5.889767,-2.125375,-8.515,-10.1669998169,-8.277,-5.71076,-8.351,-6.091944,-5.711,-0.5564,-8.33752,-8.746,-3.83333325386,-9.38486,-5.71076,-0.890117,-5.889767,-6.047,-1.011629,-5.75,-0.5564,-5.71076,-2.391,-8.33546,0.833329975605,1.59622,-0.5564,-2.937801,-5.106324,-5.106324,-5.835,-8.73361,-3.83333325386,-3.661,-0.890117,1.60757,-1.011629,1.61667,-5.835,-2.937801,1,-3.661,-5.106324,-8.29321,0.75345,-5.889767,-8.515,-2.391,-8.515,-2.937801,-0.878271,2.276583,-1.011629,-3.661,1.496,-1.83333003521,1.798433,-6.090417,-5.28888893127,-2.125375,-2.125375,-5.889767,-2.391,-5.71076,-6.047,-5.889767,0.75345,-8.36212,-1.905283,-0.890117,-2.937801,-5.889767,0.75345,-5.889767,-2.937801,-5.708783,-5.835,-5.708783,-1.189,-6.090417,-1.011629,-5.708783,-5.889767,-3.61750006676,-1.189,-5.106324,-0.5564,-1.011629,-2.391,-0.5564,-1.011629,2.276583,-5.889767,-3.661,-5.889767,-5.889767,-5.889767,-1.011629,-5.71076,0.851670026779,-5.28888893127,-6.091944,-6.091944,-5.889767,-5.106324,-0.131084,1.496,-3.661,-8.515,-0.890117,-5.889767,2.103917,1.496,-5.708783,-0.890117,-10.1666669846,-1.011629,-3.661,-1.011629,-2.391,-5.708783,2.953778,-8.515,-5.708783,-5.708783,-1.011629,-5.889767,-2.125375,-8.53005,-1.189,-1.011629,-5.106324,-1.011629,1.496,-0.890117,-0.890117,-1.011629,-8.515,-0.5564,-1.189,-1.011629,-8.73361,-1.011629,-6,-10.1669998169,-2.937801,-5.889767,-5.71076,-5.708783,-0.890117,-0.890117,-6,3.1465,3.1465,-5.835,-1.905283,-5.889767,-3.79999995232,-0.5564,1.496,-1.905283,1.68166995049,3.1465,-8.833335,-0.890117,-0.878271,-7.30833,-3.661,-3.661,0.75345,0.75345,-1.011629,-1.905283,-2.125375,-0.890117,-1.189,-1.011629,-1.011629,-0.5564,-5.106324,-8.515,-1.189,-8.33677,-1.905283,3.1465,-8.52967,-1.189,-8.746,3.1465,1.496,-3.83333325386,-0.5564,-1.189,-7.5,-0.890117,-1.011629,-3.661,-5.106324,-5.711,-1.011629,-0.87095,-5.106324,-8.351,-0.131084,-5.711,-5.889767,-0.890117,-1.189,-0.5564,-10.159445,-1.905283,-5.711,1.496,-3.536123,3.1465,-1.011629,1.496,-1.189,-5.708783,-0.131084,-1.011629,-1.011629,2.276583,-2.937801,-0.878271,1.496,-8.515,1.45699,-5.889767,-1.189,1.49678,5.86016,-5.106324,0.75345,-1.53999996185,1.68166995049,-8.2175,-5.711,-2.937801,-2.937801,-2.125375,-8,-5.708783,-5.106324,-0.5564,-6.090417,-5.889767,-2.391,-2.937801,-5.71076,-1.189,-0.5564,-1.011629,-1.011629,-3.361,-2.937801,-2.125375,-1.011629,-5.708783,-5.889767,-5.889767,1.496,-2.391,-5.889767,-2.937801,-5.711,-5.889767,-2.391,-8.27,-7.35014,-5.708783,-5.889767,-0.131084,-7.775835,-9.152085,-8.515,1.496,-1.011629,-5.106324,-3.661,-3.661,1.496,-2.391,-5.71076,-7.5,1.496,-2.125375,-3.661,-1.011629,-6.090417,-0.890117,-3.361,-0.890117,-8.515,-8.515,-5.711,-5.889767,1,-1.011629,-1.905283,-10.15861,-3.83299994469,-2.125375,-2.125375,-5.708783,-1.011629,-5.708783,-10,-3.661,-1.189,-1.189,3.1465,0.883333325386,-0.92735,-5.889767,-8.515,-6.047,-1.905283,1.496,-1.189,-2.937801,-5.835,-5.711,-5.708783,-1.189,-7.69433,-8.33498,-2.125375,-6.091944,-5.708783,-3.83299994469,-7.5,-1.011629,0.75345,-5.889767,-3.661,-1.011629,-1.905283,-5.708783,-2.125375,1.496,-5.71076,-3.661,3.1465,-2.391,-1.189,-3.13166999817,-1.011629,0.75345,-1.011629,-2.125375,-5.889767,-8,-3.661,0.75345,-6.091944,-5.708783,3.1465,-1.4472222,3.1465,-1.905283,-2.125375,-2.937801,1.496,-2.125375,-5.106324,-3.661,-5.106324,-8.351,1.496,-8,-1.189,-8.515,-5.889767,-5.708783,-5.711,-5.708783,3.1465,-1.189,-5.708783,-8.26578,-3.661,-3,-8.33677,-8.515,-1.011629,-2.937801,-5.708783,-5.889767,-5.708783,-3.661,-8.843335,-5.889767,-2.391,-8.53273,-5.708783,-1.011629,-0.890117,-8.515,-3.361,-8.717,0.75345,-8.515,3.1465,-2.125375,-3.83299994469,3.1465,-1.011629,-2.125375,-1.189,1.60122,3.1465,-2.125375,0.75345,-1.905283,-1.189,-3.361,-1.44722223282,-0.5564,-5.71076,-5.708783,-0.890117,-5.889767,-1.189,3.1465,-8.75,3.1465,-5.106324,-1.011629,-5.889767,-0.131084,-5.933333],[134.553,116.049,137.47736,136.227533,128.342946,106.597,120.413888,115.593,127.24691,106.573,119.289287,110.403683,119.289287,134.553,127.24691,106.572267,115.63,98.195528,133.775,106.572267,136.227533,98.195528,106.597,127.40935,98.195528,106.597,132.327238,134.553,121.411,127.24691,132.327238,127.24691,136.084,121.411,98.5208282471,106.572267,98.195528,136.084,125.095001221,110.403683,130.130758,121.411,125.633003235,115.594,106.597,116.05,120.413888,106.597,130.678014,115.66,115.545,128.166671753,136.30028,106.597,134.08165,110.403683,105.549,98.195528,106.617,130.678014,106.597,134.553,116.029,127.566673279,124.768,130.678014,132.327238,119.289287,119.289287,110.439,115.22,128.166671753,133.775,134.08165,124.766,98.195528,124.75,110.439,132.327238,97.8333358765,133.775,119.289287,115.589,127.40935,110.403683,121.411,134.553,121.411,132.327238,128.342946,127.779867,98.195528,133.775,124.838,127.508888245,127.999483,105.41825,122.099998474,130.130758,130.130758,110.403683,134.553,106.597,105.549,110.403683,127.40935,116.072,136.227533,134.08165,132.327238,110.403683,127.40935,110.403683,132.327238,106.572267,110.439,106.572267,136.084,105.41825,98.195528,106.572267,110.403683,128.283004761,136.084,119.289287,130.678014,98.195528,134.553,130.678014,98.195528,127.779867,110.403683,133.775,110.403683,110.403683,110.403683,98.195528,106.597,127.555000305,122,120.413888,120.413888,110.403683,119.289287,127.24691,124.838,133.775,121.411,134.08165,110.403683,127.786383,124.838,106.572267,134.08165,125.633331299,98.195528,133.775,98.195528,134.553,106.572267,105.8465,121.411,106.572267,106.572267,98.195528,110.403683,130.130758,115.514,136.084,98.195528,119.289287,98.195528,124.838,134.08165,134.08165,98.195528,121.411,130.678014,136.084,98.195528,115.22,98.195528,106.75,125.633003235,132.327238,110.403683,106.597,106.572267,134.08165,134.08165,106.75,125.4591,125.4591,110.439,136.227533,110.403683,128.100006104,130.678014,124.838,136.227533,127.53666687,125.4591,136.30083,134.08165,128.342946,134.71083,133.775,133.775,127.40935,127.40935,98.195528,136.227533,130.130758,134.08165,136.084,98.195528,98.195528,130.678014,119.289287,121.411,136.084,115.662,136.227533,125.4591,115.514,136.084,115.545,125.4591,124.838,128.166671753,130.678014,136.084,132.5,134.08165,98.195528,133.775,119.289287,106.597,98.195528,134.109,119.289287,116.05,127.24691,106.597,110.403683,134.08165,136.084,130.678014,138.867915,136.227533,106.597,124.838,128.373806,125.4591,98.195528,124.838,136.084,106.572267,127.24691,98.195528,98.195528,127.779867,132.327238,128.342946,124.838,121.411,125.242,110.403683,136.084,125.242,95.2828,119.289287,127.40935,127.39666748,127.53666687,136.134585,106.597,132.327238,132.327238,130.130758,115,106.572267,119.289287,130.678014,105.41825,110.403683,134.553,132.327238,106.597,136.084,130.678014,98.195528,98.195528,135.496,132.327238,130.130758,98.195528,106.572267,110.403683,110.403683,124.838,134.553,110.403683,132.327238,106.597,110.403683,134.553,115.63,133.476115,106.572267,110.403683,127.24691,133.450835,136.30028,121.411,124.838,98.195528,119.289287,133.775,133.775,124.838,134.553,106.597,132.5,124.838,130.130758,133.775,98.195528,105.41825,134.08165,135.496,134.08165,121.411,121.411,106.597,110.403683,97.8330001831,98.195528,136.227533,139.49347,128.167007446,130.130758,130.130758,106.572267,98.195528,106.572267,125,133.775,136.084,136.084,125.4591,127.683326721,131.123467,110.403683,121.411,105.549,136.227533,124.838,136.084,132.327238,110.439,106.597,106.572267,136.084,113.826,116.032,130.130758,120.413888,106.572267,128.167007446,132.5,98.195528,127.40935,110.403683,133.775,98.195528,136.227533,106.572267,130.130758,124.838,106.597,133.775,125.4591,134.553,136.084,132.508331299,98.195528,127.40935,98.195528,130.130758,110.403683,115,133.775,127.40935,120.413888,106.572267,125.4591,117.03611,125.4591,136.227533,130.130758,132.327238,124.838,130.130758,119.289287,133.775,119.289287,116.05,124.838,115,136.084,121.411,110.403683,106.572267,106.597,106.572267,125.4591,136.084,106.572267,117.492,133.775,128,115.662,121.411,98.195528,132.327238,106.572267,110.403683,106.572267,133.775,134.98556,110.403683,134.553,115.584,106.572267,98.195528,134.08165,121.411,135.496,116.25,127.40935,121.411,125.4591,130.130758,128.167007446,125.4591,98.195528,130.130758,136.084,124.765,125.4591,130.130758,127.40935,136.227533,136.084,135.496,117.036109924,130.678014,106.597,106.572267,134.08165,110.403683,136.084,125.4591,115.1500015,125.4591,119.289287,98.195528,110.403683,127.24691,123.975],[3,10,3,3,3,3,3,10,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,10,3,3,3,3,3,3,3,3,10,3,3,3,10,3,10,3,3,3,3,3,10,3,3,3,10,3,10,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,10,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3],null,null,{"interactive":true,"className":"","stroke":false,"color":["#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a"],"weight":1,"opacity":1,"fill":true,"fillColor":["#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a"],"fillOpacity":0.3},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-10.1669998169,5.86016],"lng":[95.2828,139.49347]}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">library</span>(leaflet)</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="kw">library</span>(robis)</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">invasives &lt;-<span class="st"> </span><span class="kw">occurrence</span>(</a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">  <span class="dt">scientificname =</span> <span class="kw">c</span>(<span class="st">&quot;Acanthaster planci&quot;</span>, <span class="st">&quot;Pterois volitans&quot;</span>),</a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">  <span class="dt">areaid =</span> <span class="dv">115</span></a>
+<a class="sourceLine" id="cb12-7" data-line-number="7">)</a>
+<a class="sourceLine" id="cb12-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb12-9" data-line-number="9"><span class="kw">leaflet</span>(invasives) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-10" data-line-number="10"><span class="st">  </span><span class="kw">addProviderTiles</span>(<span class="st">&quot;Esri.WorldGrayCanvas&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-11" data-line-number="11"><span class="st">  </span><span class="kw">addCircleMarkers</span>(</a>
+<a class="sourceLine" id="cb12-12" data-line-number="12">    <span class="op">~</span>decimalLongitude, <span class="op">~</span>decimalLatitude, <span class="dt">weight =</span> <span class="dv">1</span>, <span class="dt">opacity =</span> <span class="dv">1</span>, <span class="dt">fillOpacity =</span> <span class="fl">0.3</span>, <span class="dt">stroke =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb12-13" data-line-number="13">    <span class="dt">color =</span> <span class="op">~</span><span class="kw">ifelse</span>(scientificName <span class="op">==</span><span class="st"> &quot;Acanthaster planci&quot;</span>, <span class="st">&quot;#a2cf4a&quot;</span>, <span class="st">&quot;#cf4a9e&quot;</span>),</a>
+<a class="sourceLine" id="cb12-14" data-line-number="14">    <span class="dt">radius =</span> <span class="op">~</span><span class="kw">ifelse</span>(<span class="op">!</span><span class="kw">is.na</span>(date_year) <span class="op">&amp;</span><span class="st"> </span>date_year <span class="op">&gt;</span><span class="st"> </span><span class="dv">2000</span>, <span class="dv">10</span>, <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb12-15" data-line-number="15">  )</a></code></pre></div>
+</section>
+<section class="slide level1">
+
+<div id="htmlwidget-8b148cdc2971022ab3de" style="width:576px;height:384px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8b148cdc2971022ab3de">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldGrayCanvas",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[-2.391,-8.35197,-8.626525,-1.905283,-0.878271,-5.711,-6.091944,-8.27535,-0.131084,-6.05862,-5.106324,-5.889767,-5.106324,-2.391,-0.131084,-5.708783,-8.27,-1.011629,-3.661,-5.708783,-1.905283,-1.011629,-5.71076,0.75345,-1.011629,-5.71076,-2.937801,-2.391,-8.515,-0.131084,-2.937801,-0.131084,-1.189,-8.515,-0.0291700009257,-5.708783,-1.011629,-1.189,1.85333001614,-5.889767,-2.125375,-8.515,-10.1669998169,-8.277,-5.71076,-8.351,-6.091944,-5.711,-0.5564,-8.33752,-8.746,-3.83333325386,-9.38486,-5.71076,-0.890117,-5.889767,-6.047,-1.011629,-5.75,-0.5564,-5.71076,-2.391,-8.33546,0.833329975605,1.59622,-0.5564,-2.937801,-5.106324,-5.106324,-5.835,-8.73361,-3.83333325386,-3.661,-0.890117,1.60757,-1.011629,1.61667,-5.835,-2.937801,1,-3.661,-5.106324,-8.29321,0.75345,-5.889767,-8.515,-2.391,-8.515,-2.937801,-0.878271,2.276583,-1.011629,-3.661,1.496,-1.83333003521,1.798433,-6.090417,-5.28888893127,-2.125375,-2.125375,-5.889767,-2.391,-5.71076,-6.047,-5.889767,0.75345,-8.36212,-1.905283,-0.890117,-2.937801,-5.889767,0.75345,-5.889767,-2.937801,-5.708783,-5.835,-5.708783,-1.189,-6.090417,-1.011629,-5.708783,-5.889767,-3.61750006676,-1.189,-5.106324,-0.5564,-1.011629,-2.391,-0.5564,-1.011629,2.276583,-5.889767,-3.661,-5.889767,-5.889767,-5.889767,-1.011629,-5.71076,0.851670026779,-5.28888893127,-6.091944,-6.091944,-5.889767,-5.106324,-0.131084,1.496,-3.661,-8.515,-0.890117,-5.889767,2.103917,1.496,-5.708783,-0.890117,-10.1666669846,-1.011629,-3.661,-1.011629,-2.391,-5.708783,2.953778,-8.515,-5.708783,-5.708783,-1.011629,-5.889767,-2.125375,-8.53005,-1.189,-1.011629,-5.106324,-1.011629,1.496,-0.890117,-0.890117,-1.011629,-8.515,-0.5564,-1.189,-1.011629,-8.73361,-1.011629,-6,-10.1669998169,-2.937801,-5.889767,-5.71076,-5.708783,-0.890117,-0.890117,-6,3.1465,3.1465,-5.835,-1.905283,-5.889767,-3.79999995232,-0.5564,1.496,-1.905283,1.68166995049,3.1465,-8.833335,-0.890117,-0.878271,-7.30833,-3.661,-3.661,0.75345,0.75345,-1.011629,-1.905283,-2.125375,-0.890117,-1.189,-1.011629,-1.011629,-0.5564,-5.106324,-8.515,-1.189,-8.33677,-1.905283,3.1465,-8.52967,-1.189,-8.746,3.1465,1.496,-3.83333325386,-0.5564,-1.189,-7.5,-0.890117,-1.011629,-3.661,-5.106324,-5.711,-1.011629,-0.87095,-5.106324,-8.351,-0.131084,-5.711,-5.889767,-0.890117,-1.189,-0.5564,-10.159445,-1.905283,-5.711,1.496,-3.536123,3.1465,-1.011629,1.496,-1.189,-5.708783,-0.131084,-1.011629,-1.011629,2.276583,-2.937801,-0.878271,1.496,-8.515,1.45699,-5.889767,-1.189,1.49678,5.86016,-5.106324,0.75345,-1.53999996185,1.68166995049,-8.2175,-5.711,-2.937801,-2.937801,-2.125375,-8,-5.708783,-5.106324,-0.5564,-6.090417,-5.889767,-2.391,-2.937801,-5.71076,-1.189,-0.5564,-1.011629,-1.011629,-3.361,-2.937801,-2.125375,-1.011629,-5.708783,-5.889767,-5.889767,1.496,-2.391,-5.889767,-2.937801,-5.711,-5.889767,-2.391,-8.27,-7.35014,-5.708783,-5.889767,-0.131084,-7.775835,-9.152085,-8.515,1.496,-1.011629,-5.106324,-3.661,-3.661,1.496,-2.391,-5.71076,-7.5,1.496,-2.125375,-3.661,-1.011629,-6.090417,-0.890117,-3.361,-0.890117,-8.515,-8.515,-5.711,-5.889767,1,-1.011629,-1.905283,-10.15861,-3.83299994469,-2.125375,-2.125375,-5.708783,-1.011629,-5.708783,-10,-3.661,-1.189,-1.189,3.1465,0.883333325386,-0.92735,-5.889767,-8.515,-6.047,-1.905283,1.496,-1.189,-2.937801,-5.835,-5.711,-5.708783,-1.189,-7.69433,-8.33498,-2.125375,-6.091944,-5.708783,-3.83299994469,-7.5,-1.011629,0.75345,-5.889767,-3.661,-1.011629,-1.905283,-5.708783,-2.125375,1.496,-5.71076,-3.661,3.1465,-2.391,-1.189,-3.13166999817,-1.011629,0.75345,-1.011629,-2.125375,-5.889767,-8,-3.661,0.75345,-6.091944,-5.708783,3.1465,-1.4472222,3.1465,-1.905283,-2.125375,-2.937801,1.496,-2.125375,-5.106324,-3.661,-5.106324,-8.351,1.496,-8,-1.189,-8.515,-5.889767,-5.708783,-5.711,-5.708783,3.1465,-1.189,-5.708783,-8.26578,-3.661,-3,-8.33677,-8.515,-1.011629,-2.937801,-5.708783,-5.889767,-5.708783,-3.661,-8.843335,-5.889767,-2.391,-8.53273,-5.708783,-1.011629,-0.890117,-8.515,-3.361,-8.717,0.75345,-8.515,3.1465,-2.125375,-3.83299994469,3.1465,-1.011629,-2.125375,-1.189,1.60122,3.1465,-2.125375,0.75345,-1.905283,-1.189,-3.361,-1.44722223282,-0.5564,-5.71076,-5.708783,-0.890117,-5.889767,-1.189,3.1465,-8.75,3.1465,-5.106324,-1.011629,-5.889767,-0.131084,-5.933333],[134.553,116.049,137.47736,136.227533,128.342946,106.597,120.413888,115.593,127.24691,106.573,119.289287,110.403683,119.289287,134.553,127.24691,106.572267,115.63,98.195528,133.775,106.572267,136.227533,98.195528,106.597,127.40935,98.195528,106.597,132.327238,134.553,121.411,127.24691,132.327238,127.24691,136.084,121.411,98.5208282471,106.572267,98.195528,136.084,125.095001221,110.403683,130.130758,121.411,125.633003235,115.594,106.597,116.05,120.413888,106.597,130.678014,115.66,115.545,128.166671753,136.30028,106.597,134.08165,110.403683,105.549,98.195528,106.617,130.678014,106.597,134.553,116.029,127.566673279,124.768,130.678014,132.327238,119.289287,119.289287,110.439,115.22,128.166671753,133.775,134.08165,124.766,98.195528,124.75,110.439,132.327238,97.8333358765,133.775,119.289287,115.589,127.40935,110.403683,121.411,134.553,121.411,132.327238,128.342946,127.779867,98.195528,133.775,124.838,127.508888245,127.999483,105.41825,122.099998474,130.130758,130.130758,110.403683,134.553,106.597,105.549,110.403683,127.40935,116.072,136.227533,134.08165,132.327238,110.403683,127.40935,110.403683,132.327238,106.572267,110.439,106.572267,136.084,105.41825,98.195528,106.572267,110.403683,128.283004761,136.084,119.289287,130.678014,98.195528,134.553,130.678014,98.195528,127.779867,110.403683,133.775,110.403683,110.403683,110.403683,98.195528,106.597,127.555000305,122,120.413888,120.413888,110.403683,119.289287,127.24691,124.838,133.775,121.411,134.08165,110.403683,127.786383,124.838,106.572267,134.08165,125.633331299,98.195528,133.775,98.195528,134.553,106.572267,105.8465,121.411,106.572267,106.572267,98.195528,110.403683,130.130758,115.514,136.084,98.195528,119.289287,98.195528,124.838,134.08165,134.08165,98.195528,121.411,130.678014,136.084,98.195528,115.22,98.195528,106.75,125.633003235,132.327238,110.403683,106.597,106.572267,134.08165,134.08165,106.75,125.4591,125.4591,110.439,136.227533,110.403683,128.100006104,130.678014,124.838,136.227533,127.53666687,125.4591,136.30083,134.08165,128.342946,134.71083,133.775,133.775,127.40935,127.40935,98.195528,136.227533,130.130758,134.08165,136.084,98.195528,98.195528,130.678014,119.289287,121.411,136.084,115.662,136.227533,125.4591,115.514,136.084,115.545,125.4591,124.838,128.166671753,130.678014,136.084,132.5,134.08165,98.195528,133.775,119.289287,106.597,98.195528,134.109,119.289287,116.05,127.24691,106.597,110.403683,134.08165,136.084,130.678014,138.867915,136.227533,106.597,124.838,128.373806,125.4591,98.195528,124.838,136.084,106.572267,127.24691,98.195528,98.195528,127.779867,132.327238,128.342946,124.838,121.411,125.242,110.403683,136.084,125.242,95.2828,119.289287,127.40935,127.39666748,127.53666687,136.134585,106.597,132.327238,132.327238,130.130758,115,106.572267,119.289287,130.678014,105.41825,110.403683,134.553,132.327238,106.597,136.084,130.678014,98.195528,98.195528,135.496,132.327238,130.130758,98.195528,106.572267,110.403683,110.403683,124.838,134.553,110.403683,132.327238,106.597,110.403683,134.553,115.63,133.476115,106.572267,110.403683,127.24691,133.450835,136.30028,121.411,124.838,98.195528,119.289287,133.775,133.775,124.838,134.553,106.597,132.5,124.838,130.130758,133.775,98.195528,105.41825,134.08165,135.496,134.08165,121.411,121.411,106.597,110.403683,97.8330001831,98.195528,136.227533,139.49347,128.167007446,130.130758,130.130758,106.572267,98.195528,106.572267,125,133.775,136.084,136.084,125.4591,127.683326721,131.123467,110.403683,121.411,105.549,136.227533,124.838,136.084,132.327238,110.439,106.597,106.572267,136.084,113.826,116.032,130.130758,120.413888,106.572267,128.167007446,132.5,98.195528,127.40935,110.403683,133.775,98.195528,136.227533,106.572267,130.130758,124.838,106.597,133.775,125.4591,134.553,136.084,132.508331299,98.195528,127.40935,98.195528,130.130758,110.403683,115,133.775,127.40935,120.413888,106.572267,125.4591,117.03611,125.4591,136.227533,130.130758,132.327238,124.838,130.130758,119.289287,133.775,119.289287,116.05,124.838,115,136.084,121.411,110.403683,106.572267,106.597,106.572267,125.4591,136.084,106.572267,117.492,133.775,128,115.662,121.411,98.195528,132.327238,106.572267,110.403683,106.572267,133.775,134.98556,110.403683,134.553,115.584,106.572267,98.195528,134.08165,121.411,135.496,116.25,127.40935,121.411,125.4591,130.130758,128.167007446,125.4591,98.195528,130.130758,136.084,124.765,125.4591,130.130758,127.40935,136.227533,136.084,135.496,117.036109924,130.678014,106.597,106.572267,134.08165,110.403683,136.084,125.4591,115.1500015,125.4591,119.289287,98.195528,110.403683,127.24691,123.975],[3,10,3,3,3,3,3,10,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,10,3,3,3,3,3,3,3,3,10,3,3,3,10,3,10,3,3,3,3,3,10,3,3,3,10,3,10,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,10,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,3,3,3,3,3,3],null,null,{"interactive":true,"className":"","stroke":false,"color":["#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a"],"weight":1,"opacity":1,"fill":true,"fillColor":["#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#cf4a9e","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#cf4a9e","#a2cf4a","#a2cf4a","#a2cf4a"],"fillOpacity":0.3},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-10.1669998169,5.86016],"lng":[95.2828,139.49347]}},"evals":[],"jsHooks":[]}</script>
+</section>
+<section class="slide level1">
+
+<h3 id="r-spatial-aggregation">R: spatial aggregation</h3>
 </section>
 <section class="slide level1">
 
@@ -1280,7 +1517,76 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 </section>
 <section class="slide level1">
 
-<p>Tracking dataset?</p>
+<h3 id="r-tracking-data">R: tracking data</h3>
+</section>
+<section class="slide level1">
+
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">library</span>(finch)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="kw">library</span>(lubridate)</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4">world &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>, <span class="dt">country =</span> <span class="st">&quot;australia&quot;</span>)</a>
+<a class="sourceLine" id="cb14-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb14-6" data-line-number="6">archive &lt;-<span class="st"> </span><span class="kw">dwca_read</span>(<span class="st">&quot;data/dwca-cdu_green_turtles-v1.0.zip&quot;</span>, <span class="dt">read =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb14-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb14-8" data-line-number="8">tracks &lt;-<span class="st"> </span>archive<span class="op">$</span>data<span class="op">$</span>occurrence.txt</a>
+<a class="sourceLine" id="cb14-9" data-line-number="9">tracks<span class="op">$</span>date &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">as.Date</span>(<span class="kw">substr</span>(tracks<span class="op">$</span>eventDate, <span class="dv">1</span>, <span class="dv">10</span>), <span class="dt">origin =</span> <span class="st">&quot;1970-01-01&quot;</span>))</a>
+<a class="sourceLine" id="cb14-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb14-11" data-line-number="11"><span class="kw">ggplot</span>(tracks) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-12" data-line-number="12"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(decimalLongitude, decimalLatitude, <span class="dt">color =</span> date), <span class="dt">size =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-13" data-line-number="13"><span class="st">  </span><span class="kw">scale_color_viridis_c</span>(<span class="dt">option =</span> <span class="st">&quot;viridis&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-14" data-line-number="14"><span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> world, <span class="dt">fill =</span> <span class="st">&quot;#000000&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-15" data-line-number="15"><span class="st">  </span><span class="kw">coord_sf</span>(<span class="dt">xlim =</span> <span class="kw">range</span>(tracks<span class="op">$</span>decimalLongitude), <span class="dt">ylim =</span> <span class="kw">range</span>(tracks<span class="op">$</span>decimalLatitude))</a></code></pre></div>
+</section>
+<section class="slide level1">
+
+<p><img src="presentation_files/figure-revealjs/tracking-1.png" width="576" /></p>
+</section>
+<section class="slide level1">
+
+<h3 id="r-ipt-access-and-timeseries-analysis">R: IPT access and timeseries analysis</h3>
+</section>
+<section class="slide level1">
+
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">library</span>(finch)</a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb15-3" data-line-number="3"><span class="kw">library</span>(lubridate)</a>
+<a class="sourceLine" id="cb15-4" data-line-number="4"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb15-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb15-6" data-line-number="6">archive &lt;-<span class="st"> </span><span class="kw">dwca_read</span>(<span class="st">&quot;data/dwca-gulf_of_trieste_lter_phytoplankton_time_series-v1.1.zip&quot;</span>, <span class="dt">read =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb15-7" data-line-number="7">occ &lt;-<span class="st"> </span>archive<span class="op">$</span>data<span class="op">$</span>occurrence.txt</a>
+<a class="sourceLine" id="cb15-8" data-line-number="8">mof &lt;-<span class="st"> </span>archive<span class="op">$</span>data<span class="op">$</span>extendedmeasurementorfact.txt</a>
+<a class="sourceLine" id="cb15-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb15-10" data-line-number="10">plankton &lt;-<span class="st"> </span>occ <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb15-11" data-line-number="11"><span class="st">  </span><span class="kw">left_join</span>(mof[mof<span class="op">$</span>measurementType <span class="op">==</span><span class="st"> &quot;Abundance&quot;</span>,], <span class="dt">by =</span> <span class="st">&quot;id&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb15-12" data-line-number="12"><span class="st">  </span><span class="kw">mutate</span>(</a>
+<a class="sourceLine" id="cb15-13" data-line-number="13">    <span class="dt">abundance =</span> <span class="kw">as.numeric</span>(measurementValue),</a>
+<a class="sourceLine" id="cb15-14" data-line-number="14">    <span class="dt">time =</span> <span class="kw">decimal_date</span>(<span class="kw">ymd</span>(<span class="kw">paste</span>(<span class="kw">as.numeric</span>(year), <span class="kw">as.numeric</span>(month), <span class="kw">as.numeric</span>(day), <span class="dt">sep =</span> <span class="st">&quot;-&quot;</span>))),</a>
+<a class="sourceLine" id="cb15-15" data-line-number="15">    <span class="dt">season =</span> (<span class="kw">as.numeric</span>(month) <span class="op">-</span><span class="st"> </span><span class="fl">0.5</span>) <span class="op">/</span><span class="st"> </span><span class="dv">12</span></a>
+<a class="sourceLine" id="cb15-16" data-line-number="16">  )</a>
+<a class="sourceLine" id="cb15-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb15-18" data-line-number="18">series &lt;-<span class="st"> </span>plankton <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb15-19" data-line-number="19"><span class="st">  </span><span class="kw">filter</span>(scientificName <span class="op">==</span><span class="st"> &quot;Dinophyceae&quot;</span>)</a>
+<a class="sourceLine" id="cb15-20" data-line-number="20"></a>
+<a class="sourceLine" id="cb15-21" data-line-number="21"><span class="kw">ggplot</span>(series) <span class="op">+</span></a>
+<a class="sourceLine" id="cb15-22" data-line-number="22"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x =</span> time, <span class="dt">y =</span> abundance)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb15-23" data-line-number="23"><span class="st">  </span><span class="kw">scale_y_continuous</span>()</a></code></pre></div>
+</section>
+<section class="slide level1">
+
+<p><img src="presentation_files/figure-revealjs/timeseries-1.png" width="576" /></p>
+</section>
+<section class="slide level1">
+
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">library</span>(mgcv)</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb16-3" data-line-number="3">mod &lt;-<span class="st"> </span><span class="kw">gam</span>(abundance <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(time, <span class="dt">bs =</span> <span class="st">&quot;tp&quot;</span>, <span class="dt">k =</span> <span class="dv">8</span>, <span class="dt">fx =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(season, <span class="dt">bs =</span> <span class="st">&quot;cc&quot;</span>, <span class="dt">k =</span> <span class="dv">4</span>, <span class="dt">fx =</span> <span class="ot">FALSE</span>), </a>
+<a class="sourceLine" id="cb16-4" data-line-number="4">           <span class="dt">data =</span> series, <span class="dt">knots =</span> <span class="kw">list</span>(<span class="dt">season =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length.out =</span> <span class="dv">4</span>)))</a>
+<a class="sourceLine" id="cb16-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb16-6" data-line-number="6"><span class="kw">plot</span>(mod, <span class="dt">pages =</span> <span class="dv">1</span>, <span class="dt">residuals =</span> T, <span class="dt">pch =</span> <span class="dv">19</span>, <span class="dt">cex =</span> <span class="fl">0.25</span>, <span class="dt">scheme =</span> <span class="dv">1</span>, <span class="dt">col =</span> <span class="st">&quot;#FF8000&quot;</span>, <span class="dt">shade =</span> T, <span class="dt">shade.col =</span> <span class="st">&quot;gray90&quot;</span>)</a></code></pre></div>
+</section>
+<section class="slide level1">
+
+<p><img src="presentation_files/figure-revealjs/timeseries2-1.png" width="576" /></p>
 </section>
 <section id="quality-control" class="slide level1">
 <h1>Quality control</h1>
@@ -1297,8 +1603,8 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 </section>
 <section class="slide level1">
 
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">fauna &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data/occurrence_edited.txt&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a>
-<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="kw">str</span>(fauna)</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">fauna &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data/occurrence_edited.txt&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="kw">str</span>(fauna)</a></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    2418 obs. of  69 variables:
 ##  $ id                           : int  475029 475030 475031 475032 475033 475034 475035 475036 475037 475038 ...
 ##  $ type                         : logi  NA NA NA NA NA NA ...
@@ -1373,14 +1679,16 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 <section class="slide level1">
 
 <h3 id="coordinates-check">Coordinates check</h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">plot_map</span>(fauna, <span class="dt">zoom =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<p><img src="presentation_files/figure-revealjs/unnamed-chunk-4-1.png" width="576" /></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw">library</span>(obistools) <span class="co"># devtools::install_github(&quot;iobis/obistools&quot;)</span></a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb19-3" data-line-number="3"><span class="kw">plot_map</span>(fauna, <span class="dt">zoom =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<p><img src="presentation_files/figure-revealjs/unnamed-chunk-7-1.png" width="576" /></p>
 </section>
 <section class="slide level1">
 
 <h3 id="coordinates-check-1">Coordinates check</h3>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">onland &lt;-<span class="st"> </span><span class="kw">check_onland</span>(fauna, <span class="dt">report =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="kw">head</span>(onland)</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">onland &lt;-<span class="st"> </span><span class="kw">check_onland</span>(fauna, <span class="dt">report =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2"><span class="kw">head</span>(onland)</a></code></pre></div>
 <pre><code>## # A tibble: 4 x 4
 ##   field level     row message                        
 ##   &lt;lgl&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;                          
@@ -1392,16 +1700,16 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 <section class="slide level1">
 
 <h3 id="coordinates-check-2">Coordinates check</h3>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">onland &lt;-<span class="st"> </span><span class="kw">check_onland</span>(fauna)</a>
-<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="kw">plot_map</span>(fauna, <span class="dt">zoom =</span> <span class="ot">TRUE</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb19-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> onland, <span class="kw">aes</span>(decimalLongitude, decimalLatitude), <span class="dt">color =</span> <span class="st">&quot;green&quot;</span>)</a></code></pre></div>
-<p><img src="presentation_files/figure-revealjs/unnamed-chunk-6-1.png" width="576" /></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">onland &lt;-<span class="st"> </span><span class="kw">check_onland</span>(fauna)</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="kw">plot_map</span>(fauna, <span class="dt">zoom =</span> <span class="ot">TRUE</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb22-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> onland, <span class="kw">aes</span>(decimalLongitude, decimalLatitude), <span class="dt">color =</span> <span class="st">&quot;green&quot;</span>)</a></code></pre></div>
+<p><img src="presentation_files/figure-revealjs/unnamed-chunk-9-1.png" width="576" /></p>
 </section>
 <section class="slide level1">
 
 <h3 id="date-format-check">Date format check</h3>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">datecheck &lt;-<span class="st"> </span><span class="kw">check_eventdate</span>(fauna)</a>
-<a class="sourceLine" id="cb20-2" data-line-number="2"><span class="kw">head</span>(datecheck)</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">datecheck &lt;-<span class="st"> </span><span class="kw">check_eventdate</span>(fauna)</a>
+<a class="sourceLine" id="cb23-2" data-line-number="2"><span class="kw">head</span>(datecheck)</a></code></pre></div>
 <pre><code>## # A tibble: 6 x 4
 ##   level   row field     message                                            
 ##   &lt;chr&gt; &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;                                              
@@ -1415,15 +1723,15 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 <section class="slide level1">
 
 <h3 id="depth-check">Depth check</h3>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">xy &lt;-<span class="st"> </span><span class="kw">lookup_xy</span>(fauna, <span class="dt">shoredistance =</span> <span class="ot">TRUE</span>, <span class="dt">grids =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb22-2" data-line-number="2">fauna &lt;-<span class="st"> </span><span class="kw">cbind</span>(fauna, xy)</a>
-<a class="sourceLine" id="cb22-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb22-4" data-line-number="4"><span class="kw">ggplot</span>(fauna) <span class="op">+</span></a>
-<a class="sourceLine" id="cb22-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(bathymetry, minimumDepthInMeters)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb22-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_abline</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb22-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="dt">intercept =</span> <span class="dv">-50</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb22-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="dt">intercept =</span> <span class="dv">50</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb22-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> fauna <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="kw">abs</span>(bathymetry <span class="op">-</span><span class="st"> </span>minimumDepthInMeters) <span class="op">&gt;</span><span class="st"> </span><span class="dv">50</span>), <span class="kw">aes</span>(bathymetry, minimumDepthInMeters), <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">xy &lt;-<span class="st"> </span><span class="kw">lookup_xy</span>(fauna, <span class="dt">shoredistance =</span> <span class="ot">TRUE</span>, <span class="dt">grids =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb25-2" data-line-number="2">fauna &lt;-<span class="st"> </span><span class="kw">cbind</span>(fauna, xy)</a>
+<a class="sourceLine" id="cb25-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb25-4" data-line-number="4"><span class="kw">ggplot</span>(fauna) <span class="op">+</span></a>
+<a class="sourceLine" id="cb25-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(bathymetry, minimumDepthInMeters)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb25-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_abline</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb25-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="dt">intercept =</span> <span class="dv">-50</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb25-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="dt">intercept =</span> <span class="dv">50</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb25-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> fauna <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="kw">abs</span>(bathymetry <span class="op">-</span><span class="st"> </span>minimumDepthInMeters) <span class="op">&gt;</span><span class="st"> </span><span class="dv">50</span>), <span class="kw">aes</span>(bathymetry, minimumDepthInMeters), <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>)</a></code></pre></div>
 </section>
 <section class="slide level1">
 
@@ -1433,10 +1741,10 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 <section class="slide level1">
 
 <h3 id="taxon-matching">Taxon matching</h3>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="kw">library</span>(obistools) <span class="co"># devtools::install_github(&quot;iobis/obistools&quot;)</span></a>
-<a class="sourceLine" id="cb23-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb23-3" data-line-number="3">worms &lt;-<span class="st"> </span><span class="kw">match_taxa</span>(fauna<span class="op">$</span>scientificName, <span class="dt">ask =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb23-4" data-line-number="4"><span class="kw">head</span>(worms)</a></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw">library</span>(obistools)</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb26-3" data-line-number="3">worms &lt;-<span class="st"> </span><span class="kw">match_taxa</span>(fauna<span class="op">$</span>scientificName, <span class="dt">ask =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb26-4" data-line-number="4"><span class="kw">head</span>(worms)</a></code></pre></div>
 <pre><code>##           scientificName                          scientificNameID
 ## 241 Praxillella gracilis urn:lsid:marinespecies.org:taxname:130324
 ## 268   Sternaspis scutata urn:lsid:marinespecies.org:taxname:131242
