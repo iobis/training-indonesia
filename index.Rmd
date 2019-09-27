@@ -813,23 +813,25 @@ ggplot() +
 library(finch)
 library(lubridate)
 
-world <- ne_countries(returnclass = "sf", country = "australia")
+world <- ne_countries(returnclass = "sf", scale = "medium")
 
-archive <- dwca_read("data/dwca-cdu_green_turtles-v1.0.zip", read = TRUE)
+archive <- dwca_read("data/dwca-argos_tracking-v1.0.zip", read = TRUE)
 
 tracks <- archive$data$occurrence.txt
 tracks$date <- as.numeric(as.Date(substr(tracks$eventDate, 1, 10), origin = "1970-01-01"))
 
-ggplot(tracks %>% arrange(desc(date))) +
+species_tracks <- tracks %>% filter(scientificName == "Thalassarche melanophrys" & decimalLongitude < 0)
+
+ggplot(species_tracks) +
   geom_point(aes(decimalLongitude, decimalLatitude, color = date), size = 0.5) +
   scale_color_viridis_c(option = "viridis") +
   geom_sf(data = world, fill = "#000000", color = "#000000") +
-  coord_sf(xlim = range(tracks$decimalLongitude), ylim = range(tracks$decimalLatitude))
+  coord_sf(xlim = range(species_tracks$decimalLongitude), ylim = range(species_tracks$decimalLatitude))
 ```
 
 --- 
 
-```{r tracking, echo = FALSE, eval = TRUE, cache = TRUE, message = FALSE, warning = FALSE}
+```{r tracking, echo = FALSE, eval = TRUE, cache = TRUE, message = FALSE, warning = FALSE, fig.height = 6}
 ```
 
 ---
