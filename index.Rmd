@@ -32,14 +32,13 @@ p.provoost@unesco.org
 
 ### Overview
 
-- Data standards
+- [Data standards](#/data-standards)
   - Darwin Core
   - Darwin Core Archive
-- OBIS data flow
-- Data publishing
-- Data access
-- Quality control
-- Rich datasets
+- [Data publishing](#/data-publishing)
+- [Data access](#/data-access)
+- [Quality control](#/quality-control)
+- [Rich datasets](#/rich-datasets)
 
 --- 
 
