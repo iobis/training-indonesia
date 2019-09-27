@@ -1,0 +1,96 @@
+/* popup */
+
+.reveal .leaflet-container {
+	font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+	
+.reveal .leaflet-container .leaflet-popup {
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+.reveal .leaflet-container .leaflet-popup-content-wrapper {
+	padding: 1px;
+	text-align: left;
+	border-radius: 12px;
+	}
+.reveal .leaflet-container .leaflet-popup-content {
+	margin: 13px 19px;
+	line-height: 1.4;
+	}
+.reveal .leaflet-container .leaflet-popup-content p {
+	margin: 18px 0;
+	}
+.reveal .leaflet-container .leaflet-popup-tip-container {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-left: -20px;
+	overflow: hidden;
+	pointer-events: none;
+	}
+.reveal .leaflet-container .leaflet-popup-tip {
+	width: 17px;
+	height: 17px;
+	padding: 1px;
+
+	margin: -10px auto 0;
+
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	     -o-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	}
+.reveal .leaflet-container .leaflet-popup-content-wrapper,
+.reveal .leaflet-container .leaflet-popup-tip {
+	background: white;
+	color: #333;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	}
+.reveal .leaflet-container .leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 4px 4px 0 0;
+	border: none;
+	text-align: center;
+	width: 18px;
+	height: 14px;
+	font: 16px/14px Tahoma, Verdana, sans-serif;
+	color: #c3c3c3;
+	text-decoration: none;
+	font-weight: bold;
+	background: transparent;
+	}
+.reveal .leaflet-container .leaflet-container a.leaflet-popup-close-button:hover {
+	color: #999;
+	}
+.reveal .leaflet-container .leaflet-popup-scrolled {
+	overflow: auto;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	}
+
+.reveal .leaflet-container .leaflet-oldie .leaflet-popup-content-wrapper {
+	zoom: 1;
+	}
+.reveal .leaflet-container .leaflet-oldie .leaflet-popup-tip {
+	width: 24px;
+	margin: 0 auto;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+	}
+.reveal .leaflet-oldie .leaflet-popup-tip-container {
+	margin-top: -1px;
+	}
+
+.reveal .leaflet-container .leaflet-oldie .leaflet-control-zoom,
+.reveal .leaflet-container .leaflet-oldie .leaflet-control-layers,
+.reveal .leaflet-container .leaflet-oldie .leaflet-popup-content-wrapper,
+.reveal .leaflet-container .leaflet-oldie .leaflet-popup-tip {
+	border: 1px solid #999;
+	}
+

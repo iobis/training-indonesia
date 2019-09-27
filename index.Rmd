@@ -7,6 +7,7 @@ output:
     css:
     - css/style.css
     - css/highlight.css
+    - css/popup.css
     theme: simple
     highlight: tango
     transition: none
@@ -753,7 +754,8 @@ leaflet(invasives) %>%
   addCircleMarkers(
     ~decimalLongitude, ~decimalLatitude, weight = 1, opacity = 1, fillOpacity = 0.3, stroke = FALSE,
     color = ~ifelse(scientificName == "Acanthaster planci", "#a2cf4a", "#cf4a9e"),
-    radius = ~ifelse(!is.na(date_year) & date_year > 2000, 10, 3)
+    radius = ~ifelse(!is.na(date_year) & date_year > 2000, 10, 3),
+    popup = ~paste0(scientificName, ifelse(!is.na(date_year), paste0(" (", date_year, ")"), ""), "<br/>", dataset_id)
   )
 ```
 
