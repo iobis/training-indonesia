@@ -798,7 +798,7 @@ ggplot() +
 
 ---
 
-### R: tracking data
+### R: IPT access, tracking data
 
 ---
 
@@ -827,7 +827,7 @@ ggplot(tracks) +
 
 ---
 
-### R: IPT access, timeseries analysis
+### R: abundance data, timeseries analysis
 
 --- 
 
