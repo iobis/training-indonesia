@@ -407,6 +407,10 @@ training instance: http://ipt.iobis.org/training/
 
 ---
 
+![schema](images/schema.png)
+
+---
+
 ## Data access: mapper
 
 ![mapper](images/mapper.png)
