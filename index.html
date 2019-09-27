@@ -1494,7 +1494,7 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 </section>
 <section class="slide level1">
 
-<h3 id="r-spatial-aggregation">R: spatial aggregation</h3>
+<h3 id="r-spatial-aggregation-indicators">R: spatial aggregation, indicators</h3>
 </section>
 <section class="slide level1">
 
@@ -1523,7 +1523,7 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 </section>
 <section class="slide level1">
 
-<h3 id="r-ipt-access-tracking-data">R: IPT access, tracking data</h3>
+<h3 id="r-direct-ipt-access-tracking-data">R: direct IPT access, tracking data</h3>
 </section>
 <section class="slide level1">
 
@@ -1537,7 +1537,7 @@ training instance: <a href="http://ipt.iobis.org/training/" class="uri">http://i
 <a class="sourceLine" id="cb14-8" data-line-number="8">tracks &lt;-<span class="st"> </span>archive<span class="op">$</span>data<span class="op">$</span>occurrence.txt</a>
 <a class="sourceLine" id="cb14-9" data-line-number="9">tracks<span class="op">$</span>date &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">as.Date</span>(<span class="kw">substr</span>(tracks<span class="op">$</span>eventDate, <span class="dv">1</span>, <span class="dv">10</span>), <span class="dt">origin =</span> <span class="st">&quot;1970-01-01&quot;</span>))</a>
 <a class="sourceLine" id="cb14-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb14-11" data-line-number="11"><span class="kw">ggplot</span>(tracks) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-11" data-line-number="11"><span class="kw">ggplot</span>(tracks <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(date))) <span class="op">+</span></a>
 <a class="sourceLine" id="cb14-12" data-line-number="12"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(decimalLongitude, decimalLatitude, <span class="dt">color =</span> date), <span class="dt">size =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
 <a class="sourceLine" id="cb14-13" data-line-number="13"><span class="st">  </span><span class="kw">scale_color_viridis_c</span>(<span class="dt">option =</span> <span class="st">&quot;viridis&quot;</span>) <span class="op">+</span></a>
 <a class="sourceLine" id="cb14-14" data-line-number="14"><span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> world, <span class="dt">fill =</span> <span class="st">&quot;#000000&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span></a>
